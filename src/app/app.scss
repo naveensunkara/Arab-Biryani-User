@@ -14,3 +14,23 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-menu{
+    ion-content.content-md{
+        background: #5c0070;
+        button.item-md{
+            background: transparent;
+            color: white;
+            font-size: 2rem;
+            &[indicate="active"]{
+                background: #6b0082;
+            }
+            .item-inner{
+                border: none;
+            }
+        }
+    }
+}
+.alert-md .alert-wrapper{
+    max-width: 100%;
+    width: 80%;
+} 
