@@ -1,0 +1,111 @@
+page-payment-details {
+    ion-toolbar {
+        .toolbar-content {
+            .button-md {
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+            }
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                button {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
+    ion-card.card-md {
+        width: 100%;
+        margin-bottom: 2rem;
+        ion-card-header {
+            font-size: 2.25rem;
+            color: #95989a;
+            h1.orderId {
+                font-size: 6rem;
+                color: #5e5e5e;
+                font-weight: 700;
+            }
+            h2.order-summary-title {
+                border-bottom: 3px solid #e6e6e6;
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #333;
+                padding-bottom: 1rem;
+                margin-bottom: 3rem; 
+            }
+        }
+    }
+    ion-card.order-status {
+        ion-card-header {
+            h2.order-summary-title {
+                margin-bottom: 0px;
+            }
+        }
+        
+    }
+    ion-card-content {
+        table {
+            text-align: center;
+            font-size: 2.25rem;
+            th{
+                font-weight: normal;
+                color: #95989a;
+                width: 30%;
+            }
+            td {
+                color: #5e5e5e;
+                font-weight: 700;
+                font-size: 2.5rem;
+            }
+            th:last-child {
+                text-align: right;
+                width: 40%;
+            }
+            td:last-child {
+                text-align: right;
+            }
+        }
+        .item-radio{
+            .radio.radio-md {
+                margin-right: 1rem;
+                .radio-icon {
+                    border-color: #95989a;
+                }
+                .radio-icon.radio-checked {
+                    border-color: #5d4484;
+                    .radio-inner {
+                        background-color: #5d4484;
+                    }
+                }
+            }
+            .item-inner {
+                ion-label {
+                    color: #95989a;
+                    font-size: 2.25rem;
+                }
+            }
+        }
+        .item-radio.item-radio-checked {
+            .item-inner {
+                ion-label {
+                    color: #333;
+                }
+            }
+        }
+    }
+    .scroll-content {
+        background: #efefef;
+    }
+}

@@ -1,0 +1,167 @@
+page-cart {
+    ion-toolbar{
+        .toolbar-content{
+            display: flex;
+            .button-md{
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+                ion-badge.badge-md{
+                    padding: 4px 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    font-size: 1.1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 2px;
+                }
+            }
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                .place-order {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
+    ion-card  {
+        img {
+            width: 35%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    ion-card-content.card-content-md {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        width: 65%;
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+    ion-content{
+        .scroll-content{
+            background: #efefef;
+        }
+        ion-list {
+            .time-left {
+                background: #fefa8d;
+                text-align: center;
+            }
+            .menuItem{
+                margin-top: 4px;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+            .coupon{
+                display: inline-block;
+                width: calc(50% - 20px);
+                border-radius: 10px;
+                border: 1px solid #ccc;
+                margin: 20px 0 0 20px;
+                .item-inner{
+                    border-bottom: none !important;
+                    box-shadow: none !important;
+                }
+            }
+            .gst{
+                background: transparent;
+                display: inline-block;
+                width: 49%;
+                text-align: right;
+                font-weight: bold;
+                .item-inner{
+                    border: none !important;
+                }
+                p{
+                    color: #000;
+                }
+                .label-md{
+                    margin-bottom: 0;
+                    p:last-child{
+                        font-size: 2.5rem;
+                        margin: 0;
+                    }
+                }
+            }
+            ion-item.grandTotal{
+                background: transparent;
+                .cartQuantity, .total{
+                    display: inline-block;
+                    width: 50%;
+                    padding-right: 5px;
+                    p:first-child{
+                        font-size: 2rem;
+                        color: #000;
+                        font-weight: bold;
+                    }
+                    p:last-child{
+                        font-size: 4rem;
+                        color: #000;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .menuItem.item-md.item-block {
+        .item-inner {
+            padding-right: 0px;
+            .label.label-md {
+                margin: 0px;
+                .card-md{
+                    margin: 0px;
+                    width: 100%;
+                    .quantity-group {
+                        border: 1px solid #95989a;
+                        border-radius: 10px;
+                        display: inline-block;
+                        overflow: hidden;
+                        position: absolute;
+                        bottom: 1rem;
+                        left: calc(35% + 16px); 
+                        background: #fff;
+                        .quantity {
+                            width: 40px;
+                            border: 0px solid #ccc;
+                            text-align: center;
+                            font-size: 1.8rem;
+                            height: 3.6rem;
+                        }
+                        .button-md {
+                            background: #fff;
+                            color: #333;
+                            margin: 0px;
+                            vertical-align: top;
+                            box-shadow: none;
+                            font-size: 1rem
+                        }
+                    }
+                    .menuItemPrice{
+                        *{color: #000;}
+                        p:last-child{
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }                        
+                    }
+                }
+            }
+        }
+
+    }
+}

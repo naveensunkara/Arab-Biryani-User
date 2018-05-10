@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-center>Payment History</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-segment [(ngModel)]="category" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="all">
+            All
+        </ion-segment-button>
+        <ion-segment-button value="paid">
+            Paid
+        </ion-segment-button>
+        <ion-segment-button value="refund">
+            Refund
+        </ion-segment-button>
+    </ion-segment>
+    <div class="history">
+        <ion-card no-margin *ngFor="let item of tempArr">
+            <ion-card-header>
+                <ion-icon [name]="item.icon"></ion-icon>
+                <h1>{{item.title}}</h1>
+            </ion-card-header>
+            <ion-card-content>
+                <p>
+                    <span>{{item.order}}</span>
+                    <span class="amount" float-right>{{item.amount}}</span>
+                </p>
+                <p class="date">{{item.date}}</p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

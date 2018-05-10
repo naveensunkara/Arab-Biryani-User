@@ -1,0 +1,52 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <button ion-button icon-only (click)="backButtonClick()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title text-center>Track Order</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card no-margin>
+        <ion-card-header>
+            Purchase Order #
+            <h1 class="orderId">1101110</h1>
+        </ion-card-header>
+        <ion-card-content>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Qty</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>80</td>
+                        <td>$ 1165.44</td>
+                    </tr>
+                </tbody>
+            </table>
+        </ion-card-content>
+    </ion-card>
+    <ion-card no-margin class="order-status">
+        <ion-card-header>
+            Order Status
+        </ion-card-header>
+        <ion-card-content>
+            <ul>
+                <li class="success">Order Placed</li>
+                <li class="success">Packing</li>
+                <li>Dispatched</li>
+                <li>Delivered</li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button block (click)="ordersPage()">Back to Orders</button>
+    </ion-toolbar>
+</ion-footer>

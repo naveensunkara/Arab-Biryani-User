@@ -1,6 +1,44 @@
 page-signup {
     .scroll-content {
         background: #efefef;
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        ion-list {
+            padding: 0 1rem;
+            ion-item{
+                margin-bottom: 0.5rem;
+            }
+            button {
+                background: #6b0082;
+            }
+        }
+        .or-separator {
+            position: relative;
+            text-align: center;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                width: 50%;
+                height: 1px;
+                background: #95989a;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                width: 30%;
+                height: 1px;
+                background: #95989a;
+            }
+        }
     }
     ion-toolbar {
         .toolbar-content {
