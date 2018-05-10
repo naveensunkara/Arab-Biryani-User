@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TrackOrderPage } from './track-order';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -9,5 +10,6 @@ import { TrackOrderPage } from './track-order';
   imports: [
     IonicPageModule.forChild(TrackOrderPage),
   ],
+  providers: [Geolocation]
 })
 export class TrackOrderPageModule {}
