@@ -1,16 +1,26 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
-  </ion-navbar>
-
+<ion-header no-border>
+  <ion-toolbar>
+    <button ion-button icon-only (click)="backButtonClick()">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+    </button>
+  </ion-toolbar>
 </ion-header>
-
-
 <ion-content>
+  <h1>Sign up with email</h1>
   <form (submit)="doSignup()">
     <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Your Name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" placeholder="Enter Your Email"></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Confirm Password"></ion-input>
+      </ion-item>
+    </ion-list>
 
+    <ion-list>
       <ion-item>
         <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
@@ -23,13 +33,11 @@
 
       <!--
       Want to add a Username? Here you go:
-
       <ion-item>
         <ion-label floating>Username</ion-label>
         <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
       </ion-item>
       -->
-
       <ion-item>
         <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>

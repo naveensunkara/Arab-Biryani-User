@@ -1,3 +1,16 @@
 page-signup {
-
+    .scroll-content {
+        background: #efefef;
+    }
+    ion-toolbar {
+        .toolbar-content {
+            .button-md {
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+            }
+        }
+    } 
 }
