@@ -57,7 +57,6 @@ export class TrackOrderPage {
       destination: 'Vadapalani',
       travelMode: google.maps.TravelMode['DRIVING']
     }, (res, status) => {
-
       if (status == google.maps.DirectionsStatus.OK) {
         directionsDisplay.setDirections(res);
       } else {

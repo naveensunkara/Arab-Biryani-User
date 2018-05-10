@@ -12,4 +12,4 @@ import { Geolocation } from '@ionic-native/geolocation';
   ],
   providers: [Geolocation]
 })
-export class TrackOrderPageModule {}
+export class TrackOrderPageModule { }
