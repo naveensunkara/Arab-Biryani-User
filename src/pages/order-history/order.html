@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-center>My Orders</ion-title>
+        <button ion-button icon-only class="filter">
+            <ion-icon name="ios-funnel-outline"></ion-icon>
+        </button>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- Segment in content -->
+    <ion-segment [(ngModel)]="order" color="primary" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="ongoing">
+            Ongoing
+        </ion-segment-button>
+        <ion-segment-button value="completed">
+            Completed
+        </ion-segment-button>
+    </ion-segment>
+    <div class="ongoing" *ngIf="order == 'ongoing'">
+        <ion-card no-margin>
+            <ion-card-header>
+                <h1 class="orderId">PO# 1101110</h1>
+                <ion-badge item-end>PACKING</ion-badge>
+            </ion-card-header>
+            <ion-card-content>
+                <table width="100%" margin-bottom>
+                    <thead>
+                        <tr>
+                            <th>Items</th>
+                            <th>Qty</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>80</td>
+                            <td>$ 1165.44</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button ion-button icon-left small round class="reorder" (click)="trackPage('MenuPage')">
+                    <ion-icon name="md-refresh"></ion-icon>
+                    Re-Order
+                </button>
+                <button ion-button small round class="trackorder" float-right (click)="trackPage('TrackPage')">Track Order</button>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div class="ongoing" *ngIf="order == 'completed'">
+        <ion-card no-margin *ngFor="let item of completedOrders">
+            <ion-card-header>
+                <h1 class="orderId">{{item.orderId}}</h1>
+            </ion-card-header>
+            <ion-card-content>
+                <table width="100%" margin-bottom>
+                    <thead>
+                        <tr>
+                            <th>Items</th>
+                            <th>Qty</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{item.item}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td>$ {{item.total}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>{{item.date}}</p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

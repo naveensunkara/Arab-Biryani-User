@@ -1,0 +1,62 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <button ion-button icon-only (click)="backButtonClick()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title text-center>Payment Detail</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card no-margin>
+        <ion-card-header>
+            <h2 class="order-summary-title">Order Summary</h2>
+            Purchase Order #
+            <h1 class="orderId">1101110</h1>
+        </ion-card-header>
+        <ion-card-content>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Qty</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>80</td>
+                        <td>$ 1165.44</td>
+                    </tr>
+                </tbody>
+            </table>
+        </ion-card-content>
+    </ion-card>
+    <ion-card no-margin class="order-status">
+        <ion-card-header>
+            <h2 class="order-summary-title">Payment Method</h2>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list radio-group>
+                <ion-item>
+                    <ion-radio item-left value="wallet" checked></ion-radio>
+                    <ion-label>Pay by BIRIYANI WALLET</ion-label>
+
+                </ion-item>
+                <ion-item>
+                    <ion-radio item-left value="debit"></ion-radio>
+                    <ion-label>Pay by Debit Card</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-radio item-left value="credit"></ion-radio>
+                    <ion-label>Pay by Credit Card</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button block (click)="nextPage()">Confirm Order</button>
+    </ion-toolbar>
+</ion-footer>

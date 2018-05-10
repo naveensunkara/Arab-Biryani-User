@@ -1,0 +1,66 @@
+page-my-account {
+    ion-header {
+        ion-toolbar {
+            .toolbar-content {
+                ion-title {
+                    padding-right: 56px;
+                }
+            }
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                button {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
+    ion-content {
+        .scroll-content {
+            background: #efefef;
+            .street-food-bg {
+                background: url(../../assets/imgs/singapore-street-food.jpg) no-repeat center;
+                background-size: cover;
+                width: 100%;
+                height: 45%;
+            }
+            ion-card.card-md.myAccount-details {
+                width: 100%;
+                ion-card-header {
+                    ion-toolbar {
+                        .toolbar-background-md {
+                            background: #fff;
+                            border-bottom: 3px solid #e5e5e5;
+                        }
+                        ion-buttons {
+                            text-transform: uppercase;
+                            .bar-button-default-md {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+                ion-card-content {
+                    ion-label {
+                        font-size: 1.8rem;
+                        color: #95989a;
+                    }
+                    h1 {
+                        font-size: 2rem;
+                        margin-bottom: 1rem
+                    }
+                }
+            }
+        }
+        
+    }
+}
