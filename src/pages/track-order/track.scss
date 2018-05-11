@@ -31,10 +31,13 @@ page-track-order {
         ion-card-header {
             font-size: 2.25rem;
             color: #95989a;
+            padding-left: 3rem;
             h1.orderId {
-                font-size: 6rem;
+                font-size: 2.5rem;
                 color: #5e5e5e;
                 font-weight: 700;
+                display: inline-block;
+                padding-left: 3rem;
             }
         }
     }
@@ -52,15 +55,19 @@ page-track-order {
             ul {
                 li {
                     list-style: none;
-                    background: url(../../assets/imgs/circumference.png) no-repeat left center;
-                    background-size: auto 80%;
+                    background: url(../../assets/imgs/circumference.png) no-repeat left 3px;
+                    background-size: auto 25px;
                     padding-left: 4rem;
                     margin-bottom: 1.5rem; 
+                    .rider-delivery {
+                        font-size: 1.8rem;
+                        text-align: center;
+                    }
                 }
                 li.success {
                     color: #484848; 
-                    background: url(../../assets/imgs/confirm.png) no-repeat left center;
-                    background-size: auto 80%;
+                    background: url(../../assets/imgs/confirm.png) no-repeat left 3px;
+                    background-size: auto 25px;
                 }
             }
             
@@ -73,16 +80,14 @@ page-track-order {
             th{
                 font-weight: normal;
                 color: #95989a;
-                width: 30%;
             }
             td {
                 color: #5e5e5e;
                 font-weight: 700;
-                font-size: 2.5rem;
+                font-size: 2.25rem;
             }
             th:last-child {
                 text-align: right;
-                width: 40%;
             }
             td:last-child {
                 text-align: right;
@@ -92,20 +97,4 @@ page-track-order {
     .scroll-content {
         background: #efefef;
     }
-    // .footer {
-    //     background: #fea20f;
-    //     text-align: center;
-    //     width: 100%;
-    //     position: fixed;
-    //     bottom: 0px;
-    //     button {
-    //         background: transparent;
-    //         box-shadow: none;
-    //         width: 45%;
-    //         font-size: 2.125rem;
-    //         color: #040404;
-    //         height: 6rem;
-    //         font-weight: bold;
-    //     }
-    // }
 }
