@@ -12,18 +12,22 @@ page-track-order {
     }
     ion-footer {
         ion-toolbar.toolbar-md {
-            padding: 0px;
-            .toolbar-content{
-                button {
-                    background: #fea20f;
-                    color: #333;
-                    font-size: 2rem;
-                    font-weight: 700;
-                    height: 6rem;
-                    margin:0px;
-                    position: static;
-                }  
+            .toolbar-background-md {
+                background: #fea20f;
             }
+            ion-buttons {
+                width: 50%;
+            }
+            button {
+                background: #fea20f;
+                color: #333;
+                font-size: 2rem;
+                font-weight: 700;
+                height: 6rem;
+                margin:0px;
+                position: static;
+                width: 100%;
+            }  
         }
     }
     ion-card.card-md {

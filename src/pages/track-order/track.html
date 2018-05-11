@@ -41,8 +41,7 @@
                 <li class="success">Packing</li>
                 <li class="success">Out for Delivery
                     <div class="rider-delivery">
-                        <img src="../../assets/imgs/maps.jpg" alt="" />
-                        Your rider will reach in 14mins
+                        <img src="../../assets/imgs/maps.jpg" alt="" /> Your rider will reach in 14mins
                     </div>
                 </li>
                 <li>Food is arriving</li>
@@ -52,6 +51,11 @@
 </ion-content>
 <ion-footer>
     <ion-toolbar>
-        <button ion-button block (click)="ordersPage()">Back to Orders</button>
+        <ion-buttons left padding-horizontal>
+            <button ion-button block (click)="ordersPage()">Back to Orders</button>
+        </ion-buttons>
+        <ion-buttons right padding-horizontal>
+            <button ion-button block>Call Rider</button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-footer>
