@@ -24,7 +24,7 @@
     <div class="ongoing" *ngIf="order == 'ongoing'">
         <ion-card no-margin>
             <ion-card-header>
-                <h1 class="orderId">PO# 1101110</h1>
+                <h1 class="orderId">Order # 1101109</h1>
                 <ion-badge item-end>PACKING</ion-badge>
             </ion-card-header>
             <ion-card-content>
@@ -32,23 +32,44 @@
                     <thead>
                         <tr>
                             <th>Items</th>
-                            <th>Qty</th>
+                            <th>Time</th>
                             <th>Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>3</td>
-                            <td>80</td>
-                            <td>$ 1165.44</td>
+                            <td class="small-font">10 mins ago</td>
+                            <td>$ 50.44</td>
                         </tr>
                     </tbody>
                 </table>
-                <button ion-button icon-left small round class="reorder" (click)="trackPage('MenuPage')">
-                    <ion-icon name="md-refresh"></ion-icon>
-                    Re-Order
-                </button>
-                <button ion-button small round class="trackorder" float-right (click)="trackPage('TrackPage')">Track Order</button>
+            </ion-card-content>
+        </ion-card>
+        <ion-card no-margin>
+            <ion-card-header>
+                <h1 class="orderId">Order # 1101110</h1>
+                <ion-badge item-end class="success">Out for Delivery</ion-badge>
+            </ion-card-header>
+            <ion-card-content>
+                <table width="100%" margin-bottom>
+                    <thead>
+                        <tr>
+                            <th>Items</th>
+                            <th>Time</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td class="small-font">15 mins ago</td>
+                            <td>$ 50.44</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- (ngModelChange)="onModelChange($event)" -->
             </ion-card-content>
         </ion-card>
     </div>
@@ -56,25 +77,33 @@
         <ion-card no-margin *ngFor="let item of completedOrders">
             <ion-card-header>
                 <h1 class="orderId">{{item.orderId}}</h1>
+                <ion-badge item-end class="success">Delivered</ion-badge>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content class="clearfix">
                 <table width="100%" margin-bottom>
                     <thead>
                         <tr>
                             <th>Items</th>
-                            <th>Qty</th>
+                            <th>Time</th>
                             <th>Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{{item.item}}</td>
-                            <td>{{item.quantity}}</td>
+                            <td class="small-font">{{item.deliverydate}}</td>
                             <td>$ {{item.total}}</td>
                         </tr>
                     </tbody>
                 </table>
-                <p>{{item.date}}</p>
+                <div float-left>
+                    <!-- <p class="completed-datetime">{{item.date}}</p> -->
+                    <rating [(ngModel)]="rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" no-margin></rating>
+                </div>
+                <button ion-button icon-left small round float-right class="reorder" (click)="trackPage('MenuPage')">
+                    <ion-icon name="md-refresh"></ion-icon>
+                    Re-Order
+                </button>
             </ion-card-content>
         </ion-card>
     </div>
