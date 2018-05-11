@@ -16,11 +16,12 @@
       <ion-card>
         <img [src]="item.imgSrc" />
         <ion-card-content>
-          <ion-card-title>
+          <ion-card-title no-padding>
             {{item.title}}
+            <p>{{item.subhead}}</p>
           </ion-card-title>
           <p class="price">
-            $ {{item.price}}
+            SGD $ {{item.price}}
           </p>
           <!-- <div class="quantity-group">
             <button ion-button icon-only (click)="add(i)" class="add-btn">

@@ -42,21 +42,21 @@ export class MenuPage {
       subhead:'Chicken Gravy, Raita and Chicken 65 2 Pcs',
       price: "18.90",
       quantity: 0,
-      imgSrc: "/assets/imgs/fish-biryani.jpg"
+      imgSrc: "/assets/imgs/fish-biryani1.jpg"
     },
     {
       title: "Gosht Ki Dum Biryani",
       subhead:'Spl Gravy, Raita',
       price: "21.45",
       quantity: 0,
-      imgSrc: "/assets/imgs/egg-biryani.jpg"
+      imgSrc: "/assets/imgs/egg-biryani1.jpg"
     },
     {
       title: "Naati KoliDonne Biryani",
       price: "20.10",
       subhead : 'Gravy, Raita and Boiled EGG',
       quantity: 0,
-      imgSrc: "/assets/imgs/veg-biryani.jpg"
+      imgSrc: "/assets/imgs/veg-biryani1.jpg"
     }
   ]
   constructor(public navCtrl: NavController) {
