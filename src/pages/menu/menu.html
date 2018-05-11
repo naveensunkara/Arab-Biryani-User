@@ -3,7 +3,7 @@
     <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title text-center>Menu</ion-title>
+    <ion-title text-center>Book Biriyani</ion-title>
     <button ion-button icon-only class="cart" (click)="placeOrder(menuItems)">
       <ion-icon name="md-basket"></ion-icon>
       <ion-badge item-end>{{cart}}</ion-badge>
@@ -22,7 +22,7 @@
           <p class="price">
             $ {{item.price}}
           </p>
-          <div class="quantity-group">
+          <!-- <div class="quantity-group">
             <button ion-button icon-only (click)="add(i)" class="add-btn">
               <ion-icon name="add"></ion-icon>
             </button>
@@ -30,7 +30,7 @@
             <button ion-button icon-only (click)="remove(i)" class="remove-btn">
               <ion-icon name="md-remove"></ion-icon>
             </button>
-          </div>
+          </div> -->
         </ion-card-content>
       </ion-card>
     </ion-item>
