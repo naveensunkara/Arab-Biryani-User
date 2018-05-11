@@ -9,7 +9,7 @@ import { IonicPage, NavController, AlertController } from 'ionic-angular';
 
 export class AccountPage {
   details: any = {
-    name: 'STREET BiRIYANI',
+    name: 'Ashley',
     phone: '+65 89745641',
     location: 'Blk 10-12 Street, 101-11 Singapore 609878'
   }
