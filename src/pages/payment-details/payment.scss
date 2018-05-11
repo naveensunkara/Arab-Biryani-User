@@ -39,11 +39,10 @@ page-payment-details {
             }
             h2.order-summary-title {
                 border-bottom: 3px solid #e6e6e6;
-                font-size: 2.5rem;
+                font-size: 2rem;
                 font-weight: 700;
                 color: #333;
                 padding-bottom: 1rem;
-                margin-bottom: 3rem; 
             }
         }
     }
@@ -56,25 +55,33 @@ page-payment-details {
         
     }
     ion-card-content {
-        table {
-            text-align: center;
-            font-size: 2.25rem;
-            th{
-                font-weight: normal;
+        .items{
+            padding-top: 1rem;
+            h3{
+                font-size: 1.8rem;
                 color: #95989a;
-                width: 30%;
+                margin-bottom: 16px;
             }
-            td {
-                color: #5e5e5e;
-                font-weight: 700;
-                font-size: 2.5rem;
+            > div h1{
+                width: 49%;
+                display: inline-block;
+                margin-bottom: 16px;
+                font-size: 1.8rem;
+                &.delivery-address {
+                    width: auto;
+                }
             }
-            th:last-child {
-                text-align: right;
-                width: 40%;
-            }
-            td:last-child {
-                text-align: right;
+            table{
+                width: 100%;
+                thead{
+                    border-bottom: 1px solid #ccc;
+                }
+                tr th:first-child, tr td:first-child{
+                    text-align: left;
+                }
+                tbody{
+                    color: #000;
+                }
             }
         }
         .item-radio{
@@ -93,14 +100,13 @@ page-payment-details {
             .item-inner {
                 ion-label {
                     color: #95989a;
-                    font-size: 2.25rem;
                 }
             }
         }
         .item-radio.item-radio-checked {
             .item-inner {
                 ion-label {
-                    color: #333;
+                    color: #000;
                 }
             }
         }

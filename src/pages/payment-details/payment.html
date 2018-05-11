@@ -10,26 +10,27 @@
     <ion-card no-margin>
         <ion-card-header>
             <h2 class="order-summary-title">Order Summary</h2>
-            Purchase Order #
-            <h1 class="orderId">1101110</h1>
         </ion-card-header>
         <ion-card-content>
-            <table width="100%">
-                <thead>
-                    <tr>
-                        <th>Items</th>
-                        <th>Qty</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>3</td>
-                        <td>80</td>
-                        <td>$ 1165.44</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="items">
+                <h3>Delivery Address</h3>
+                <div>
+                    <h1 class="delivery-address">120, Baliester Rd, Singapore 320 564</h1>
+                </div>
+                <h3>Items</h3>
+                <div>
+                    <h1>Chicken Biriyani</h1>
+                    <h1 text-right>x 2</h1>
+                </div>
+                <div>
+                    <h1>Mutton Biriyani</h1>
+                    <h1 text-right>x 1</h1>
+                </div>
+                <div>
+                    <h1>Egg Biriyani</h1>
+                    <h1 text-right>x 1</h1>
+                </div>
+            </div>
         </ion-card-content>
     </ion-card>
     <ion-card no-margin class="order-status">
