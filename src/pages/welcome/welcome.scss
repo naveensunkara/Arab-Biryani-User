@@ -1,4 +1,38 @@
 page-welcome {
+  ion-content {
+    .scroll-content {
+      background: #6b0082;
+      text-align: center;
+      color: #fff;
+      .logo {
+        padding: 10rem 0;
+      }
+      .get-started {
+        font-size: 2rem;
+        .sign-in-btns {
+          .button-md {
+            font-size: 2rem;
+            border-radius: 10px;
+            padding: 2rem 0rem 2.5rem;
+            text-transform: capitalize;
+            width: 40%;
+            border: 3px solid #fea20f;
+            background: #fea20f;
+            &.button-outline-md{
+               background: transparent;
+               color: #fff;
+               box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+
+
+
   // .splash-bg {
   //   position: relative;
   //   background: url('../assets/img/splashbg.png') no-repeat transparent;
@@ -43,42 +77,5 @@ page-welcome {
   //     background-color: rgb(220, 220, 220);
   //   }
   // }
-  ion-content {
-    .scroll-content {
-      background: #000;
-      text-align: center;
-      color: #fff;
-    }
-  }
-  .welcome-text {
-    padding: 10rem 0;
-    text-transform: uppercase;
-    h3 {
-      font-size: 2rem;
-    }
-    h1 {
-      font-size: 6rem;
-      color: #f53d3d;
-      color: #6b0082;
-      font-weight: 700;
-    }
-  }
-  .get-started {
-    font-size: 2rem;
-    .sign-in-btns {
-      .button-md {
-        font-size: 2rem;
-        border-radius: 5px;
-        padding: 2rem 0rem;
-        text-transform: capitalize;
-        width: 40%;
-        border: 3px solid #6b0082;
-        background: #6b0082;
-        &.button-outline-md{
-           background: transparent;
-           color: #fff;
-        }
-      }
-    }
-  }
+  
 }
