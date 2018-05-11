@@ -9,5 +9,8 @@ import { AddressPage } from './address';
   imports: [
     IonicPageModule.forChild(AddressPage),
   ],
+  exports: [
+    AddressPage
+  ]
 })
 export class AddressPageModule {}
