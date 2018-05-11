@@ -1,0 +1,58 @@
+page-nearby {
+    ion-toolbar{
+        ion-title{
+            padding-right: 56px;
+        }
+    }
+    ion-content{
+        ion-searchbar{
+            position: fixed;
+            top: 60px;
+            z-index: 100;
+            width: calc(100% - 40px);
+            margin: 0 20px;
+        }
+        .searchbar-md .searchbar-input{
+            border-radius: 22px;
+        }
+        #map{
+            height: 50%;
+        }
+        .branchList{
+            max-height: 50%;
+            overflow: scroll;
+            ion-card.card-md{
+                width: 100%;
+                border: 1px solid #dedede;
+                ion-card-content{
+                    position: relative;
+                }
+                h1{
+                    margin: 0;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #ccc;
+                }
+                h2{
+                    width: 60%;
+                }
+                button{
+                    background: #fea20f;
+                    color: #000;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                    font-weight: bold;
+                }
+            }
+            .logo {
+                float: left;
+                height: 30px;
+                width: 30px;
+                background: url(/assets/imgs/pointer-app.png) no-repeat;
+                background-size: contain;
+                padding-left: 6px;
+                padding-top: 2px;
+              }
+        }
+    }
+}

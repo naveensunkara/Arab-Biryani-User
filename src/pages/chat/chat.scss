@@ -1,0 +1,44 @@
+page-chat {
+    ion-toolbar{
+        ion-title{
+            padding-right: 56px;
+        }
+    }
+    .logo {
+        float: left;
+        height: 40px;
+        width: 30px;
+        background: url(/assets/imgs/pointer-app.png) no-repeat;
+        background-size: contain;
+        padding-left: 9px;
+        padding-top: 4px;
+      }
+      .details{
+          display: flex;
+          border-bottom: 1px solid #999;
+          button.button-md{
+              background: #9a00ff;
+              width: 100px;
+          }
+      }
+      .restaurant{
+          h1{
+              margin-top: 0;    
+          }
+          h5{
+              color:#999;
+          }
+      }
+      .replySupport, .replyYou{
+          display: flex;
+          .image > div{
+            height: 50px;
+            width: 50px;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+          }
+          .reply{
+              padding: 0 16px;
+          }
+      }
+}
