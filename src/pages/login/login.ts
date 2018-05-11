@@ -3,7 +3,7 @@ import { IonicPage, NavController, ToastController, NavParams, Events } from 'io
 
 import { User } from '../../providers';
 import { MainPage } from '../';
-import { ShareService } from '../../providers/share/share';
+//import { ShareService } from '../../providers/share/share';
 
 @IonicPage()
 @Component({
@@ -26,7 +26,7 @@ export class LoginPage {
     public user: User,
     public toastCtrl: ToastController,
     public navParams: NavParams,
-    public share: ShareService,
+    //public share: ShareService,
     public events: Events) {
     }
 
@@ -34,7 +34,7 @@ export class LoginPage {
   doLogin() {
     this.user.login(this.account).subscribe((resp) => {
       if(this.account.number[this.account.number.length-1] == '1'){
-        this.share.setUser('branch');
+        //this.share.setUser('branch');
         this.navCtrl.push(MainPage);
         this.events.publish("menuObject", 'branch', 2);
       }

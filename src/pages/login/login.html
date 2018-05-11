@@ -1,8 +1,7 @@
 <ion-content>
-  <div class="logo">
-    <img src="assets/imgs/logo1.png" alt="Arab St Biriyani" class="loginLogo">
-  </div>
-  <form (submit)="doLogin()" class="loginForm" padding-horizontal>
+
+  <form (submit)="doLogin()" class="loginForm" padding-horizontal padding-vertical>
+    <h1>Sign In</h1>
     <ion-list>
       <img src="assets/imgs/mobile.svg" width="30px" margin-right>
       <ion-item no-padding>
@@ -14,11 +13,11 @@
         <ion-label floating>Password</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
-
+      <div class="forgot-password">Forgot Password?</div>
       <div padding-vertical>
         <button ion-button color="primary" class="login" block>SIGN IN</button>
       </div>
-
+      <div class="create-account">Create, if you don't have any account. </div>
     </ion-list>
   </form>
 </ion-content>
