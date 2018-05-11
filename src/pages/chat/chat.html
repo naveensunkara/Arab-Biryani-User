@@ -18,14 +18,16 @@
     <button ion-button small (click)="goback()">CLOSE</button>
   </div>
   <div class="replySupport">
-    <div class="image" padding><div></div></div>
+    <div class="image" padding text-center>
+      <div></div>Support</div>
     <div class="reply">
       <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
       </p>
     </div>
   </div>
   <div class="replyYou">
-    <div class="image" padding><div></div></div>
+    <div class="image" padding text-center>
+      <div></div>YOU</div>
     <div class="reply">
       <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
       </p>
@@ -33,3 +35,14 @@
   </div>
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar no-padding>
+    <ion-list no-margin>
+
+      <ion-item no-padding>
+        <ion-input type="text" placeholder="Type here..."></ion-input>
+      </ion-item>
+      <button ion-button>SEND</button>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>
