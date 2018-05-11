@@ -21,5 +21,8 @@ export class AddressPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddressPage');
   }
+  nextPage() {
+    this.navCtrl.push('PaymentPage');
+  }
 
 }
