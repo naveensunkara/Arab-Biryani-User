@@ -3,19 +3,19 @@
         <button ion-button icon-only (click)="backButtonClick()">
             <ion-icon name="ios-arrow-back"></ion-icon>
         </button>
-        <ion-title text-center>Order Completed</ion-title>
+        <ion-title text-center>Order Complete</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
     <ion-card no-margin>
         <ion-card-header>
             <img src="assets/imgs/tick-inside-circle.png" />
-            <h1>Payment Complete</h1>
+            <h1>Your order is confirmed</h1>
         </ion-card-header>
         <ion-card-content>
             We`ve sent you an confirmation email with your order summary. Also you can track your order using our app.
             <br />
-            <br /> Purchase Order #
+            <br /> Order #
             <h1 id="orderId">1101110</h1>
         </ion-card-content>
     </ion-card>
@@ -28,11 +28,11 @@
 </ion-content>
 <ion-footer>
     <ion-toolbar>
-        <ion-buttons left>
-            <button ion-button (click)="ordersPage()">Back to Orders</button>
+        <ion-buttons left padding-horizontal>
+            <button ion-button (click)="ordersPage()" >Back to Orders</button>
         </ion-buttons>
-        <ion-buttons right>
-            <button ion-button (click)="nextPage()">Track Order</button>
+        <ion-buttons right padding-horizontal>
+            <button ion-button (click)="nextPage()" >Track Order</button>
         </ion-buttons>
     </ion-toolbar>
 </ion-footer>
