@@ -47,19 +47,20 @@ page-menu {
     }
     ion-card  {
         img {
-            width: 35%;
-            display: inline-block;
-            vertical-align: top;
+            height: 200px;
         }
     }
     ion-card-content.card-content-md {
-        display: inline-block;
-        vertical-align: top;
         padding: 10px;
-        width: 65%;
         .price {
+            width: 150px;
             font-size: 2rem;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            white-space: initial;
+            direction: rtl;
+            color: white;
         }
     }
     .menuItem.item-md.item-block {
@@ -70,6 +71,21 @@ page-menu {
                 .card-md{
                     margin: 0px;
                     width: 100%;
+                    position: relative;
+                    ion-card-content{
+                        display: flex;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0.44);
+                        ion-card-title{
+                            width: calc(100% - 150px);
+                            color: white;
+                            p{
+                                color: white;
+                            }
+                        }
+                    }
                     .quantity-group {
                         border: 1px solid #95989a;
                         border-radius: 10px;
