@@ -38,7 +38,10 @@
                 </ion-card-content>
             </ion-card>
         </ion-item>
-
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <div class="cartDetails">
         <ion-item class="coupon">
             <ion-input type="text" placeholder="Enter Coupon here" [(ngModel)]="coupon" (change)="discount()"></ion-input>
         </ion-item>
@@ -56,9 +59,7 @@
                 <p class="bigFont">$ {{parse(total)}}</p>
             </div>
         </ion-item>
-    </ion-list>
-</ion-content>
-<ion-footer>
+    </div>
     <ion-toolbar>
         <button ion-button block class="place-order" (click)="nextPage()">PROCEED TO PAY</button>
     </ion-toolbar>
