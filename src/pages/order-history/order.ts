@@ -33,6 +33,22 @@ export class OrderPage {
             deliverydate: "03 May 2018",
             total: 65.75,
             date: 'On 23 Apr, 2018 06:05 PM'
+        },
+        {
+            orderId: 'PO# 1101107',
+            item: 2,
+            quantity: 25,
+            deliverydate: "03 May 2018",
+            total: 65.75,
+            date: 'On 23 Apr, 2018 06:05 PM'
+        },
+        {
+            orderId: 'PO# 1101107',
+            item: 2,
+            quantity: 25,
+            deliverydate: "03 May 2018",
+            total: 65.75,
+            date: 'On 23 Apr, 2018 06:05 PM'
         }
     ]
     constructor(public navCtrl: NavController) { }
