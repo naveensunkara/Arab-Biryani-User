@@ -1,11 +1,43 @@
-<ion-menu [content]="content">
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-
-<ion-nav #content [root]="rootPage"></ion-nav>
+<ion-header no-border>
+  <ion-toolbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Menu</ion-title>
+    <button ion-button icon-only class="cart" (click)="placeOrder(menuItems)">
+      <ion-icon name="md-basket"></ion-icon>
+      <ion-badge item-end>{{cart}}</ion-badge>
+    </button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item no-padding class="menuItem" *ngFor="let item of menuItems; index as i">
+      <ion-card>
+        <img [src]="item.imgSrc" />
+        <ion-card-content>
+          <ion-card-title>
+            {{item.title}}
+          </ion-card-title>
+          <p class="price">
+            $ {{item.price}}
+          </p>
+          <div class="quantity-group">
+            <button ion-button icon-only (click)="add(i)" class="add-btn">
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <input type="number" [(ngModel)]="item.quantity" class="quantity" (change)="cartCount()">
+            <button ion-button icon-only (click)="remove(i)" class="remove-btn">
+              <ion-icon name="md-remove"></ion-icon>
+            </button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button block class="place-order" (click)="placeOrder(menuItems)">Place Order</button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,20 +1,42 @@
 page-signup {
     .scroll-content {
-        background: #efefef;
+        background: #6b0082;
         h1 {
-            text-align: center;
-            font-weight: 700;
+            color: #fff;
             text-transform: uppercase;
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            text-align: center;
+            padding: 2rem 0;
         }
-        ion-list {
-            padding: 0 1rem;
-            ion-item{
-                margin-bottom: 0.5rem;
+        .signupform{
+            padding-top: 5rem;
+            ion-item.item-md{
+                background-color: transparent; 
+                display: inline-block;
+                width: calc(100% - 50px);
+                color: #fff;
             }
-            button {
-                background: #6b0082;
+            .button-md-primary.signup {
+                color: #000;
+                background-color: #fea20f;
+                font-weight: bold;
+                font-size: 1.6rem;
+                border-radius: 15px;
+                height: 52px;
+            }
+            .create-account {
+                text-align: center;
+                color: #fea20f;
+            }
+            .forgot-password {
+                text-align: right;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 2rem 0 0;
+            }
+            .terms-conditions {
+                span {
+                    color: #d37330;
+                }
             }
         }
         .or-separator {
@@ -25,7 +47,7 @@ page-signup {
                 position: absolute;
                 left: 10px;
                 top: 50%;
-                width: 50%;
+                width: 40%;
                 height: 1px;
                 background: #95989a;
             }
@@ -34,21 +56,10 @@ page-signup {
                 position: absolute;
                 right: 10px;
                 top: 50%;
-                width: 30%;
+                width: 40%;
                 height: 1px;
                 background: #95989a;
             }
         }
     }
-    ion-toolbar {
-        .toolbar-content {
-            .button-md {
-                background: transparent;
-                box-shadow: none;
-                position: absolute;
-                top: 8px;
-                z-index: 10;
-            }
-        }
-    } 
 }
