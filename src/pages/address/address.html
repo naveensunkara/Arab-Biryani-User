@@ -5,12 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header no-border>
-    <ion-toolbar>
-        <button ion-button icon-only menuToggle (click)="menu()">
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title text-center>Your Cart</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <button ion-button icon-only menuToggle (click)="menu()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center> Delivery Address</ion-title>
+    <button ion-button icon-only class="cart" (click)="placeOrder(menuItems)">
+      <ion-icon name="md-basket"></ion-icon>
+      <ion-badge item-end>3</ion-badge>
+    </button>
+  </ion-toolbar>
 </ion-header>
 <ion-content padding>
 

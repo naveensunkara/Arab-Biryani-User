@@ -1,0 +1,40 @@
+page-notification{
+    ion-toolbar{
+        ion-title{
+            padding-right: 56px;
+        }
+    }
+    ion-content{
+        ion-card.card-md{
+            width: 100%;
+            border: 1px solid #ccc;
+            .card-header-md {
+                position: relative;
+                h1{
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+                ion-icon{
+                    position: absolute;
+                    top: 20px;
+                    font-size: 1.6em;
+                }
+            }
+            .card-content{
+                p{
+                    &.date{
+                        margin-top: 40px;
+                    }
+                    color: #95989a;
+                    font-size: 1.6rem;
+                    .amount{
+                        display: inline-block;
+                        font-size: 3.5rem; 
+                        color: #000;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -51,4 +51,9 @@ export class MenuPopupPage {
     this.viewCtrl.dismiss();
     this.events.publish('modal:finished', 'yourpage');
   }
+  MenuPage(){
+    this.viewCtrl.dismiss();
+    this.events.publish('modal:finished', 'yourpage');
+    alert(this.cart);
+  }
 }

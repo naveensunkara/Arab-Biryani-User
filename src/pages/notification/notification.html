@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-center>Notifications</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card no-margin *ngFor="let item of notification">
+        <ion-card-header>
+            <h1>{{item.title}}</h1>
+        </ion-card-header>
+        <ion-card-content>
+            <p>
+                {{item.order}}
+            </p>
+            <p class="date">{{item.date}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

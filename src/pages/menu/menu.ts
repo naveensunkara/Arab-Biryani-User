@@ -49,7 +49,8 @@ export class MenuPage {
     events.subscribe('modal:finished', (page) => {
 
       if(page == 'yourpage') {
-        this.navCtrl.push('CartPage', {items: this.menuItems});
+        //this.navCtrl.push('CartPage', {items: this.menuItems});
+        //this.navCtrl.push('MenuPage', {items: this.menuItems});
       }
   
     });
