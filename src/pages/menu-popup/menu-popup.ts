@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ export class MenuPopupPage {
   params: any;
   itemIndex: any;
   cart: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public events: Events) {
     this.params = this.navParams.data.items;
     this.itemIndex = this.navParams.data.index;
     this.cart = this.navParams.data.cart;
@@ -46,5 +46,9 @@ export class MenuPopupPage {
     });
     if(this.cart > 99)
       this.cart = '99+';
+  }
+  cartPage(){
+    this.viewCtrl.dismiss();
+    this.events.publish('modal:finished', 'yourpage');
   }
 }

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Nav, NavController, ModalController, Modal } from 'ionic-angular';
+import { IonicPage, Nav, NavController, ModalController, Modal, ViewController, Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -45,8 +45,14 @@ export class MenuPage {
       imgSrc: "/assets/imgs/veg-biryani1.jpg"
     }
   ]
-  constructor(public navCtrl: NavController, public alertCtrl: ModalController) {
-    
+  constructor(public navCtrl: NavController, public alertCtrl: ModalController, public viewCtrl: ViewController, events: Events) {
+    events.subscribe('modal:finished', (page) => {
+
+      if(page == 'yourpage') {
+        this.navCtrl.push('CartPage', {items: this.menuItems});
+      }
+  
+    });
   }
 
   ionViewDidLoad() {
@@ -75,7 +81,8 @@ export class MenuPage {
   }
 
   placeOrder(menu){
-    this.navCtrl.push('CartPage',{items: this.menuItems});
+    this.navCtrl.push('CartPage',{items: this.menuItems})
+    
   }
 
   showConfirm(itemIndex) {

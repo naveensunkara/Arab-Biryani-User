@@ -1,7 +1,7 @@
 <ion-header no-border>
     <ion-toolbar>
-        <button ion-button icon-only (click)="backButtonClick()">
-            <ion-icon name="ios-arrow-back"></ion-icon>
+        <button ion-button icon-only menuToggle (click)="menu()">
+            <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title text-center>Your Cart</ion-title>
     </ion-toolbar>
@@ -14,7 +14,7 @@
         </ion-item>
         <ion-item no-padding class="menuItem" *ngFor="let item of cartItems | myfilter:args ; index as i">
             <ion-card>
-                <img [src]="item.imgSrc" />
+                <img [src]="img[i]" />
                 <ion-card-content>
                     <ion-card-title>
                         {{item.title}}

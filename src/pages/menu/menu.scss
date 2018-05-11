@@ -1,8 +1,12 @@
 ion-modal.customModal{
-    width: 90%;
-    height: 55%;
-    top: 25%;
-    left: 5%;
+    position: relative;
+    .modal-wrapper{
+        width: 90%;
+        height: 55%;
+        top: 25%;
+        left: 5%;
+        position: absolute;
+    }
 }
 page-menu {
     ion-toolbar{
