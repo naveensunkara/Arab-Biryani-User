@@ -1,25 +1,30 @@
 <ion-content>
   <form (submit)="doSignup()" class="signupform" padding-horizontal>
-      <h1>Sign up with email</h1>
-      <ion-list>
-        <img src="assets/imgs/mobile.svg" width="30px" margin-right>
-        <ion-item no-padding>
-          <ion-label floating>Mobile Number</ion-label>
-          <ion-input type="text" [(ngModel)]="account.number" name="email"></ion-input>
-        </ion-item>
-        <img src="assets/imgs/lock.svg" width="30px" margin-right>
-        <ion-item no-padding>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-        </ion-item>
-        <div class="terms-conditions">I am accepting your <span>Terms & Conditions</span> by clicking below</div>
-        <div padding-vertical>
-          <button ion-button color="primary" class="signup" block>Create Account</button>
-        </div>
-        <div class="create-account">Create, if you don't have any account. </div>
-      </ion-list>
+    <h1>Sign up with email</h1>
+    <ion-list>
+      <img src="assets/imgs/mobile.svg" width="30px" margin-right>
+      <ion-item no-padding>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="text" [(ngModel)]="account.number" name="email"></ion-input>
+      </ion-item>
+      <img src="assets/imgs/lock.svg" width="30px" margin-right>
+      <ion-item no-padding>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+      <div class="terms-conditions">I am accepting your
+        <span>Terms & Conditions</span> by clicking below</div>
+      <div padding-vertical>
+        <button ion-button color="primary" class="signup" block>Create Account</button>
+      </div>
+      <div padding-vertical class="create-account">Already, I have an Account</div>
+      <div class="or-separator">
+        or
+      </div>
+      <div padding-vertical>
+        <button ion-button color="primary" class="signup facebook-btn" block>Login Via Facebook</button>
+        <button ion-button color="primary" class="signup google-btn" block>Login Via Google</button>
+      </div>
+    </ion-list>
   </form>
-  <div class="or-separator">
-    or
-  </div>
 </ion-content>

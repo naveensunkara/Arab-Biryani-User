@@ -6,9 +6,15 @@ page-signup {
             text-transform: uppercase;
             text-align: center;
             padding: 2rem 0;
+            @media (max-height: 640px){
+                padding: 0;
+            }
         }
         .signupform{
             padding-top: 5rem;
+            @media (max-height: 640px){
+                padding-top: 0;
+            }
             ion-item.item-md{
                 background-color: transparent; 
                 display: inline-block;
@@ -22,10 +28,20 @@ page-signup {
                 font-size: 1.6rem;
                 border-radius: 15px;
                 height: 52px;
+                &.facebook-btn {
+                    background: #3c5b9b;
+                    color: #fff;
+                    margin-bottom: 1rem;
+                }
+                &.google-btn {
+                    background: #d33f31;
+                    color: #fff;
+                }
             }
             .create-account {
                 text-align: center;
                 color: #fea20f;
+                padding-top: 0;
             }
             .forgot-password {
                 text-align: right;
@@ -34,6 +50,9 @@ page-signup {
                 padding: 2rem 0 0;
             }
             .terms-conditions {
+                color: #fff;
+                text-align: center;
+                margin-top: 2rem;
                 span {
                     color: #d37330;
                 }
@@ -42,23 +61,24 @@ page-signup {
         .or-separator {
             position: relative;
             text-align: center;
+            color: #fff;
             &:before {
                 content: "";
                 position: absolute;
-                left: 10px;
+                left: 1rem;
                 top: 50%;
                 width: 40%;
                 height: 1px;
-                background: #95989a;
+                background: #fff;
             }
             &:after {
                 content: "";
                 position: absolute;
-                right: 10px;
+                right: 1rem;
                 top: 50%;
                 width: 40%;
                 height: 1px;
-                background: #95989a;
+                background: #fff;
             }
         }
     }
