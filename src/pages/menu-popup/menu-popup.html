@@ -1,0 +1,18 @@
+<ion-content>
+  <img [src]='params.imgSrc' height="200px" width="100%">
+  <h1 padding-left>{{params.title}}</h1>
+  <p padding-left no-margin padding-bottom class="subhead">{{params.subhead}}</p>
+  <div class="flexbox">
+    <h3 class="label" text-left>Quantity</h3>
+    <div class="quantity-group">
+      <button ion-button icon-only (click)="add()" class="add-btn">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <input type="number" [(ngModel)]="params.quantity" class="quantity" (change)="cartCount()">
+      <button ion-button icon-only (click)="remove()" class="remove-btn">
+        <ion-icon name="md-remove"></ion-icon>
+      </button>
+    </div>
+    <h3 class="label" text-right>SGD $ {{params.quantity * params.price}}</h3>
+  </div>
+</ion-content>
