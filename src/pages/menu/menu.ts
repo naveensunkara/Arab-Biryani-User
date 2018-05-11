@@ -46,14 +46,11 @@ export class MenuPage {
     }
   ]
   constructor(public navCtrl: NavController, public alertCtrl: ModalController, public viewCtrl: ViewController, events: Events) {
-    events.subscribe('modal:finished', (page) => {
-
-      if(page == 'yourpage') {
-        //this.navCtrl.push('CartPage', {items: this.menuItems});
-        //this.navCtrl.push('MenuPage', {items: this.menuItems});
-      }
-  
-    });
+    // events.subscribe('modal:finished', (page) => {
+    //   if(page == 'yourpage') {
+    //     this.navCtrl.push('CartPage', {items: this.menuItems});
+    //   }
+    // });
   }
 
   ionViewDidLoad() {
@@ -89,5 +86,9 @@ export class MenuPage {
   showConfirm(itemIndex) {
     let confirm = this.alertCtrl.create('MenuPopupPage', {items: this.menuItems, index: itemIndex, cart: this.cart}, {cssClass: 'customModal'});
     confirm.present();
+  }
+
+  findBiriyani(){
+    this.navCtrl.push('NearbyPage');
   }
 }

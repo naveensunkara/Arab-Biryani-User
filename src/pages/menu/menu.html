@@ -6,7 +6,7 @@
     <ion-title text-center>Book Biriyani</ion-title>
     <button ion-button icon-only class="cart" (click)="placeOrder(menuItems)">
       <ion-icon name="md-basket"></ion-icon>
-      <ion-badge item-end>{{cart}}</ion-badge>
+      <ion-badge item-end>3</ion-badge>
     </button>
   </ion-toolbar>
 </ion-header>
@@ -37,3 +37,13 @@
     </ion-item>
   </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons left padding-horizontal>
+      <button ion-button (click)="findBiriyani()">Find Biriyani</button>
+    </ion-buttons>
+    <ion-buttons right padding-horizontal active>
+      <button ion-button>Book Biryani</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

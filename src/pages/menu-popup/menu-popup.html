@@ -3,7 +3,7 @@
   <h1 padding-left>{{params[itemIndex].title}}</h1>
   <p padding-left no-margin padding-bottom class="subhead">{{params[itemIndex].subhead}}</p>
   <div class="flexbox">
-    <h3 class="label" text-left>Quantity</h3>
+    <h3 class="label" text-left>Qty</h3>
     <div class="quantity-group">
       <button ion-button icon-only (click)="add()" class="add-btn">
         <ion-icon name="add"></ion-icon>
@@ -13,11 +13,10 @@
         <ion-icon name="md-remove"></ion-icon>
       </button>
     </div>
-    <h3 class="label" text-right>SGD $ {{parse(params[itemIndex].quantity * params[itemIndex].price)}}</h3>
+    <h3 class="label" text-right>SGD $ <span>{{parse(params[itemIndex].quantity * params[itemIndex].price)}}</span></h3>
   </div>
   <div class="button-group">
     <button ion-button (click)="close()">Close</button>
-    <!-- <button ion-button (click)="cartPage()">Add to Cart</button> -->
-    <button ion-button (click)="MenuPage(menuItems)">Add to Cart</button>
+    <button ion-button (click)="cartPage()">Add to Cart</button>
   </div>
 </ion-content>

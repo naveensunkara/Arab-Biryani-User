@@ -16,6 +16,30 @@
     </button>
   </ion-toolbar>
 </ion-header>
-<ion-content padding>
+<ion-content>
 
+  <ion-list radio-group>
+    <ion-item>
+      <ion-radio item-left value="wallet" checked></ion-radio>
+      <ion-label>
+        <h1>Home</h1>
+        <div>120, Balister Rd, Singapore 320 547</div>
+      </ion-label>
+    </ion-item>
+    <ion-item class="new-address">
+      <ion-radio item-left value="debit"></ion-radio>
+      <ion-label>
+        <h1>Add New Address</h1>
+      </ion-label>
+    </ion-item>
+    <div class="address">
+        <textarea placeholder="Address"></textarea>
+        <button ion-button round float-right>Save</button>
+      </div>
+  </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button block (click)="nextPage()">Confirm Delivery</button>
+  </ion-toolbar>
+</ion-footer>

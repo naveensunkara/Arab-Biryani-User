@@ -100,6 +100,7 @@ export class NearbyPage {
     });
     this.infowindow.push(infowindow);
     google.maps.event.addListener(marker, 'click', () => {
+      this.openChat();
       for (var j = 0; j < this.infowindow.length; j++) {
         let temp = this.infowindow[j];
         temp.close();

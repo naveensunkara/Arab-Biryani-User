@@ -2,6 +2,9 @@ page-cart {
     ion-toolbar{
         .toolbar-content{
             display: flex;
+            .toolbar-title-md {
+                padding-right: 56px;
+            }
             .button-md{
                 background: transparent;
                 box-shadow: none;
@@ -55,6 +58,10 @@ page-cart {
         }
     }
     ion-content{
+        &.content-md{
+            background: #efefef;
+        }
+        
         .scroll-content{
             background: #efefef;
         }
@@ -106,6 +113,9 @@ page-cart {
         }
         ion-item.grandTotal{
             background: transparent;
+            .cartQuantity {
+                text-align: center;
+            }
             .cartQuantity, .total{
                 display: inline-block;
                 width: 50%;
@@ -116,7 +126,7 @@ page-cart {
                     font-weight: bold;
                 }
                 p:last-child{
-                    font-size: 4rem;
+                    font-size: 3rem;
                     color: #000;
                     font-weight: bold;
                 }

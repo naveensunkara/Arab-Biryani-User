@@ -97,7 +97,7 @@
                 </table>
                 <div float-left>
                     <!-- <p class="completed-datetime">{{item.date}}</p> -->
-                    <rating [(ngModel)]="rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star"
+                    <rating [(ngModel)]="item.rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star"
                         nullable="false" no-margin></rating>
                 </div>
                 <button ion-button icon-left small round float-right class="reorder" (click)="trackPage('MenuPage')">

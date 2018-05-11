@@ -47,11 +47,12 @@ page-nearby {
             .logo {
                 float: left;
                 height: 30px;
-                width: 30px;
+                width: 25px;
                 background: url(/assets/imgs/pointer-app.png) no-repeat;
                 background-size: contain;
-                padding-left: 6px;
+                margin-right: 5px;
                 padding-top: 2px;
+                text-align: center;
               }
         }
     }

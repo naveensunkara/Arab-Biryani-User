@@ -72,7 +72,7 @@ export class CartPage {
             this.cart = '99+';
     }
     nextPage() {
-        this.navCtrl.push('PaymentPage');
+        this.navCtrl.push('AddressPage');
     }
     discount() {
         this.cartCount();

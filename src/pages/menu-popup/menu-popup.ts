@@ -10,6 +10,7 @@ export class MenuPopupPage {
   params: any;
   itemIndex: any;
   cart: any;
+  currentCount: Array<number>= [0,0,0,0,0];
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public events: Events) {
     this.params = this.navParams.data.items;
     this.itemIndex = this.navParams.data.index;
@@ -33,7 +34,10 @@ export class MenuPopupPage {
   }
   close(){
     this.viewCtrl.dismiss();
+    console.log(this.currentCount)
+    this.params[this.itemIndex].quantity = this.currentCount[this.itemIndex];
     this.cartCount();
+
   }
   parse(a){
     let c = String(a);
@@ -49,11 +53,9 @@ export class MenuPopupPage {
   }
   cartPage(){
     this.viewCtrl.dismiss();
-    this.events.publish('modal:finished', 'yourpage');
-  }
-  MenuPage(){
-    this.viewCtrl.dismiss();
-    this.events.publish('modal:finished', 'yourpage');
-    alert(this.cart);
+    let index = this.params[this.itemIndex].quantity;
+    this.currentCount[this.itemIndex] = index;
+    console.log(this.currentCount)
+    //this.events.publish('modal:finished', 'yourpage');
   }
 }

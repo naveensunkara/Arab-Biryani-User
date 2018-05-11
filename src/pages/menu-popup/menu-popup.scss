@@ -15,6 +15,10 @@ page-menu-popup {
                 .label{
                     margin: 0;
                     flex-grow: 1;
+                    span {
+                        display: inline-block;
+                        min-width: 70px;
+                    }
                 }
             }
             .quantity-group {
