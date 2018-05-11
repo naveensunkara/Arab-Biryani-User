@@ -24,32 +24,37 @@ export class MenuPage {
   cart: any = 0;
   menuItems: any = [
     {
-      title: "Chicken Biriyani",
-      price: "10.99",
+      title: "Chicken reshmi biryani",
+      subhead:'Gravy, Raita and Boiled EGG',
+      price: "16.45",
       quantity: 0,
-      imgSrc: "/assets/imgs/chicken-biryani.jpg"
+      imgSrc: "/assets/imgs/chicken-biryani1.jpg"
     },
     {
-      title: "Mutton Biriyani",
-      price: "19.99",
+      title: "DUM Biryani",
+      subhead:'Chicken Gravy, Raita and Boiled EGG',
+      price: "24.45",
       quantity: 0,
-      imgSrc: "/assets/imgs/mutton-biryani.jpg"
+      imgSrc: "/assets/imgs/mutton-biryani1.jpg"
     },
     {
-      title: "Fish Biriyani",
-      price: "11.99",
+      title: "Spl Chicken Biryani",
+      subhead:'Chicken Gravy, Raita and Chicken 65 2 Pcs',
+      price: "18.90",
       quantity: 0,
       imgSrc: "/assets/imgs/fish-biryani.jpg"
     },
     {
-      title: "Egg Biriyani",
-      price: "7.99",
+      title: "Gosht Ki Dum Biryani",
+      subhead:'Spl Gravy, Raita',
+      price: "21.45",
       quantity: 0,
       imgSrc: "/assets/imgs/egg-biryani.jpg"
     },
     {
-      title: "Veg Biriyani",
-      price: "5.99",
+      title: "Naati KoliDonne Biryani",
+      price: "20.10",
+      subhead : 'Gravy, Raita and Boiled EGG',
       quantity: 0,
       imgSrc: "/assets/imgs/veg-biryani.jpg"
     }
