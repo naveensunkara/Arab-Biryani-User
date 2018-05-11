@@ -79,7 +79,7 @@ export class MenuPage {
   }
 
   showConfirm(itemIndex) {
-    let confirm = this.alertCtrl.create('MenuPopupPage', this.menuItems[itemIndex], {cssClass: 'customModal'});
+    let confirm = this.alertCtrl.create('MenuPopupPage', {items: this.menuItems, index: itemIndex, cart: this.cart}, {cssClass: 'customModal'});
     confirm.present();
   }
 }
