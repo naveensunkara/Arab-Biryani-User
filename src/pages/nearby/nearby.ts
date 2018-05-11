@@ -108,5 +108,7 @@ export class NearbyPage {
       });
     });
   }
-
+  openChat(){
+    this.navCtrl.push('ChatPage');
+  }
 }
