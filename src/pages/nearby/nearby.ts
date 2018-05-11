@@ -14,7 +14,7 @@ export class NearbyPage {
   map: any;
   userLocation: any;
   markers: Array<Object> = [];
-  infowindow: Array<Object> = [];
+  infowindow: Array<any> = [];
   image = {
     url: '/assets/imgs/pointer-app.png',
     size: new google.maps.Size(71, 71),
@@ -101,7 +101,8 @@ export class NearbyPage {
     this.infowindow.push(infowindow);
     google.maps.event.addListener(marker, 'click', () => {
       for (var j = 0; j < this.infowindow.length; j++) {
-        this.infowindow[j].close();
+        let temp = this.infowindow[j];
+        temp.close();
       }
       this.ngZone.run(() => {
         infowindow.open(this.map, marker);
