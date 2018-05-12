@@ -32,6 +32,10 @@ page-order {
         }
     }
     ion-card.card-md{
+        rating {
+            display: inline-block;
+            vertical-align: middle;
+        }
         ul {
             margin: 5px 0px;
             padding: 0px;

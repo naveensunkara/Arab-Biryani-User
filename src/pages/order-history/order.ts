@@ -61,4 +61,7 @@ export class OrderPage {
     segmentChanged($event) {
         console.log(this.order)
     }
+    nextpage(){
+        this.navCtrl.push('TrackPage');
+    }
 }
