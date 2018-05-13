@@ -36,6 +36,7 @@ page-menu {
             }
             ion-buttons {
                 width: 50%;
+                //display: none;
                 &.bar-buttons-md{
                     text-align: center;
                 }
@@ -53,7 +54,7 @@ page-menu {
                 font-weight: 700;
                 height: 6rem;
                 position: static;
-                
+                box-shadow: none;
             } 
         }
     }

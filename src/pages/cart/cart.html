@@ -42,9 +42,21 @@
 </ion-content>
 <ion-footer>
     <div class="cartDetails">
-        <ion-item class="coupon">
-            <ion-input type="text" placeholder="Enter Coupon here" [(ngModel)]="coupon" (change)="discount()"></ion-input>
-        </ion-item>
+        <div class="coupon">
+            <ion-item class="">
+                <ion-input type="text" placeholder="Enter Coupon" [(ngModel)]="coupon" (change)="discount()"></ion-input>
+                <button clear item-right icon-only>
+                    <!-- <img src="assets/imgs/tick-inside-circle.png" width="25" /> -->
+                    <img src="assets/imgs/confirm.png" width="25" />
+                </button>
+            </ion-item>
+            <ion-label>
+                <span *ngIf="discountVal">
+                    You have saved ${{parse(discountVal)}}.
+                </span>
+                &nbsp;
+            </ion-label>
+        </div>
         <ion-item class="gst">
             <p class="gstLabel">GST (7%)</p>
             <p>$ {{parse(tax)}}</p>

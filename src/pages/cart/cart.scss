@@ -82,18 +82,32 @@ page-cart {
         }
         .coupon{
             display: inline-block;
+            vertical-align: middle;
             width: calc(50% - 20px);
-            border-radius: 10px;
-            border: 1px solid #ccc;
             margin: 20px 0 0 20px;
+            ion-item {
+                border-radius: 10px;
+                border: 1px solid #ccc;
+            }
+            ion-label {
+                text-align: center;
+                margin: 0px;
+                color: green;
+            }
             .item-inner{
                 border-bottom: none !important;
                 box-shadow: none !important;
+                button {
+                    background: transparent;
+                    margin: 0;
+                    border-left: 1px solid #ccc;
+                }
             }
         }
         .gst{
             background: transparent;
             display: inline-block;
+            vertical-align: middle;
             width: 49%;
             text-align: right;
             font-weight: bold;

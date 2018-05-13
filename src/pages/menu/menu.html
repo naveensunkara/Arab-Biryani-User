@@ -23,15 +23,6 @@
           <p class="price">
             SGD $ {{item.price}}
           </p>
-          <!-- <div class="quantity-group">
-            <button ion-button icon-only (click)="add(i)" class="add-btn">
-              <ion-icon name="add"></ion-icon>
-            </button>
-            <input type="number" [(ngModel)]="item.quantity" class="quantity" (change)="cartCount()">
-            <button ion-button icon-only (click)="remove(i)" class="remove-btn">
-              <ion-icon name="md-remove"></ion-icon>
-            </button>
-          </div> -->
         </ion-card-content>
       </ion-card>
     </ion-item>
@@ -45,5 +36,6 @@
     <ion-buttons right padding-horizontal active>
       <button ion-button>Book Biryani</button>
     </ion-buttons>
+    <button ion-button block (click)="placeOrder(menuItems)">Proceed to checkout</button>
   </ion-toolbar>
 </ion-footer>

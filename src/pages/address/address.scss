@@ -42,8 +42,9 @@ page-address {
                 padding: 2rem 1rem;
                 border-bottom: 1px solid transparent;
                 &.item-radio-checked{
-                    //background: #fff;
-                    border-bottom: 1px solid #ccc;
+                    background: #fff;
+                    //border-bottom: 1px solid #ccc;
+                    //border-top: 1px solid #ccc;
                     ion-radio {
                         .radio-checked {
                             border-color: #000;
@@ -79,6 +80,10 @@ page-address {
                 font-size: 1.8rem;
                 width: 100%;
                 padding: 1rem
+            }
+            button {
+                background: #fea20f;
+                color: #000;
             }
         }
     }

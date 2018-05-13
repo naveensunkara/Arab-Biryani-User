@@ -14,6 +14,7 @@ export class CartPage {
     cart: any = 0;
     tax: any = 0;
     total: any = 0;
+    discountVal: any = 0;
 
     img: any = [
         "/assets/imgs/chicken-biryani.jpg",
@@ -23,7 +24,44 @@ export class CartPage {
         "/assets/imgs/veg-biryani.jpg"
     ];
     constructor(public navParams: NavParams, public navCtrl: NavController, public menuCtrl: MenuController) {
-        this.cartItems = navParams.data.items;
+        //this.cartItems = navParams.data.items;
+        this.cartItems = [
+            {
+              title: "Chicken reshmi biryani",
+              subhead:'Gravy, Raita and Boiled EGG',
+              price: "16.45",
+              quantity: 0,
+              imgSrc: "/assets/imgs/chicken-biryani1.jpg"
+            },
+            {
+              title: "DUM Biryani",
+              subhead:'Chicken Gravy, Raita and Boiled EGG',
+              price: "24.45",
+              quantity: 0,
+              imgSrc: "/assets/imgs/mutton-biryani1.jpg"
+            },
+            {
+              title: "Spl Chicken Biryani",
+              subhead:'Chicken Gravy, Raita and Chicken 65 2 Pcs',
+              price: "18.90",
+              quantity: 3,
+              imgSrc: "/assets/imgs/fish-biryani1.jpg"
+            },
+            {
+              title: "Gosht Ki Dum Biryani",
+              subhead:'Spl Gravy, Raita',
+              price: "21.45",
+              quantity: 2,
+              imgSrc: "/assets/imgs/egg-biryani1.jpg"
+            },
+            {
+              title: "Naati KoliDonne Biryani",
+              price: "20.10",
+              subhead : 'Gravy, Raita and Boiled EGG',
+              quantity: 3,
+              imgSrc: "/assets/imgs/veg-biryani1.jpg"
+            }
+          ]
         if (this.cartItems.length > 0)
             this.cartCount();
     }
@@ -76,10 +114,14 @@ export class CartPage {
     }
     discount() {
         this.cartCount();
-        if (this.coupon == '10percent')
+        if (this.coupon == '10percent'){
+            this.discountVal = this.total / 10;
             this.total = this.total - (this.total / 10);
-        else
+        }
+        else{
             this.cartCount();
+            this.discountVal = 0;
+        }
     }
     menu(){
         this.menuCtrl.open();
