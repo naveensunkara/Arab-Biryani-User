@@ -11,7 +11,10 @@ import { Settings } from '../providers';
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Arab Biryani</ion-title>
+        <!--<ion-title>Arab Biryani</ion-title>-->
+        <button ion-button icon-only>
+          <img src="../assets/imgs/user.png" />
+        </button>
       </ion-toolbar>
     </ion-header>
 

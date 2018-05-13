@@ -1,16 +1,19 @@
 page-chat {
-    ion-toolbar{
-        .button-md {
-            background: transparent;
-            box-shadow: none;
-            position: absolute;
-            top: 8px;
-            z-index: 10;
-        }
-        ion-title{
-            padding-right: 56px;
+    ion-header{
+        ion-toolbar{
+            .button-md {
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+            }
+            ion-title{
+                padding-right: 56px;
+            }
         }
     }
+    
     .logo {
         float: left;
         height: 40px;
