@@ -113,4 +113,7 @@ export class NearbyPage {
   openChat(){
     this.navCtrl.push('ChatPage');
   }
+  backButtonClick() {
+    this.navCtrl.pop();
+  }
 }

@@ -28,5 +28,7 @@ export class NotificationPage {
         }
     ]
     constructor(public navCtrl: NavController) { }
-    
+    nextPage(){
+        this.navCtrl.push('TrackPage');
+    }
 }

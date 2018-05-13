@@ -18,26 +18,36 @@ export class PaymentHistoryPage {
             icon: 'md-card',
             order: 'Order # 1100011'
         },{
-            type: 'refund',
-            title: 'Refund to Customer',
-            amount: '$ 811.34',
-            date: 'On 24, Apr, 2018 10:37 PM',
-            icon: 'logo-usd',
-            order: 'Ticket # ASB110011'
-        },{
             type: 'paid',
             title: 'Paid for Order',
             amount: '$ 785.35',
             date: 'On 23, Apr, 2018 09:27 PM',
             icon: 'md-card',
             order: 'Order # 1100009'
-        },{
-            type: 'refund',
-            title: 'Refund to Customer',
-            amount: '$ 546.56',
-            date: 'On 22, Apr, 2018 08:07 PM',
-            icon: 'logo-usd',
-            order: 'Ticket # ASB110010'
+        },
+        {
+            type: 'cancelled',
+            title: 'Cancelled Order',
+            amount: '$ 785.35',
+            date: 'On 23, Apr, 2018 09:27 PM',
+            icon: 'md-card',
+            order: 'Order # 1100009'
+        },
+        {
+            type: 'paid',
+            title: 'Paid for Order',
+            amount: '$ 785.35',
+            date: 'On 23, Apr, 2018 09:27 PM',
+            icon: 'md-card',
+            order: 'Order # 1100009'
+        },
+        {
+            type: 'cancelled',
+            title: 'Cancelled Order',
+            amount: '$ 785.35',
+            date: 'On 23, Apr, 2018 09:27 PM',
+            icon: 'md-card',
+            order: 'Order # 1100009'
         }
     ]
     tempArr: any = this.history;
@@ -53,6 +63,9 @@ export class PaymentHistoryPage {
                     this.tempArr.push(element);
             });
         }
+    }
+    nextpage(){
+        this.navCtrl.push('TrackPage');
     }
     
 }

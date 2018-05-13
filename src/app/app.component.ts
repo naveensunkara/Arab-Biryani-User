@@ -32,8 +32,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Find Biryni', component: 'NearbyPage' },
-    { title: 'Book Biryani', component: 'MenuPage' },
+    { title: 'Find Biriyani', component: 'NearbyPage' },
+    { title: 'Book Biriyani', component: 'MenuPage' },
     { title: 'My Orders', component: 'OrderPage' },
     { title: 'Payment History', component: 'PaymentHistoryPage' },
     { title: 'My Account', component: 'AccountPage' },
@@ -47,7 +47,8 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.statusBar.backgroundColorByHexString('#5c0070');
+      this.splashScreen.show();
     });
     this.initTranslate();
   }

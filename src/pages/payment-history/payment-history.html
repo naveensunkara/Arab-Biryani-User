@@ -12,15 +12,15 @@
         <ion-segment-button value="paid">
             Paid
         </ion-segment-button>
-        <ion-segment-button value="refund">
-            Refund
+        <ion-segment-button value="cancelled">
+            Cancelled
         </ion-segment-button>
     </ion-segment>
 </ion-header>
 <ion-content>
 
     <div class="history">
-        <ion-card no-margin *ngFor="let item of tempArr">
+        <ion-card no-margin *ngFor="let item of tempArr" (click)="nextpage()">
             <ion-card-header>
                 <ion-icon [name]="item.icon"></ion-icon>
                 <h1>{{item.title}}</h1>

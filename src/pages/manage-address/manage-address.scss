@@ -1,0 +1,92 @@
+page-manage-address {
+    ion-toolbar{
+        .toolbar-content{
+            display: flex;
+            .cart{
+                background: transparent;
+                box-shadow: none;
+                ion-badge.badge-md{
+                    padding: 4px 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    font-size: 1.1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 2px;
+                }
+            }
+            .button-md {
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+            }
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                button {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
+    .scroll-content {
+        background: #efefef;
+        ion-list {
+            ion-item {
+                margin-bottom: 0px;
+                padding: 2rem 1rem;
+                border-bottom: 1px solid transparent;
+                &.item-radio-checked{
+                    //background: #fff;
+                    border-bottom: 1px solid #ccc;
+                    ion-radio {
+                        .radio-checked {
+                            border-color: #000;
+                            .radio-inner {
+                                background: #000;
+                            }
+                        }
+                    }
+                    &.item-md {
+                        ion-label {
+                            color: #000;
+                        }
+                    }
+                    &.new-address + .address {
+                        display: block;
+                    }
+                }
+                .item-inner {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+        .address {
+            display: none;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            textarea {
+                border: 1px solid #ccc;
+                background: #fefefe;
+                margin: 1rem 0;
+                border-radius: 10px;
+                min-height: 100px;
+                font-size: 1.8rem;
+                width: 100%;
+                padding: 1rem
+            }
+        }
+    }
+}

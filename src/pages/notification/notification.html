@@ -7,7 +7,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-card no-margin *ngFor="let item of notification">
+    <ion-card no-margin *ngFor="let item of notification" (click)="nextPage()">
         <ion-card-header>
             <h1>{{item.title}}</h1>
         </ion-card-header>

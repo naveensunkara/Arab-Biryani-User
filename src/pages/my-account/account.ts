@@ -89,4 +89,7 @@ export class AccountPage {
     });
     prompt.present();
   }
+  nextPage(){
+    this.navCtrl.push('ManageAddressPage');
+  }
 }

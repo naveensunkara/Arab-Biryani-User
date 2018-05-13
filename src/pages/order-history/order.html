@@ -74,12 +74,12 @@
     </div>
     <div class="ongoing" *ngIf="order == 'completed'">
         <ion-card no-margin *ngFor="let item of completedOrders">
-            <ion-card-header>
+            <ion-card-header (click)="nextpage()">
                 <h1 class="orderId">{{item.orderId}}</h1>
                 <ion-badge item-end class="success">Delivered</ion-badge>
             </ion-card-header>
             <ion-card-content class="clearfix">
-                <table width="100%" margin-bottom>
+                <table width="100%" margin-bottom (click)="nextpage()">
                     <thead>
                         <tr>
                             <th>Items</th>
