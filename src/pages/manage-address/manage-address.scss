@@ -77,6 +77,12 @@ page-manage-address {
             display: none;
             padding-left: 3rem;
             padding-right: 3rem;
+            .item-md {
+                background: transparent;
+                .item-inner {
+                    box-shadow: none;
+                }
+            }
             textarea {
                 border: 1px solid #ccc;
                 background: #fefefe;
@@ -86,6 +92,10 @@ page-manage-address {
                 font-size: 1.8rem;
                 width: 100%;
                 padding: 1rem
+            }
+            button {
+                background: #fea20f;
+                color: #000;
             }
         }
     }

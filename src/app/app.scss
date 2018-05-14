@@ -29,6 +29,22 @@ ion-menu{
             }
         }
     }
+    ion-header {
+        text-align: center;
+        position: static;
+        button.button-md {
+            background: transparent;
+            width: auto;
+            height: auto;
+            box-shadow: none;
+            img{
+                height: 120px;
+            }
+        }
+        .toolbar-content-md {
+            padding: 10px 0;
+        }
+    }
 }
 .alert-md .alert-wrapper{
     max-width: 100%;

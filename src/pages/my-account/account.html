@@ -7,7 +7,15 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <div class="street-food-bg"> </div>
+    <ion-card no-margin class="profile-pic">
+        <ion-card-header no-padding>
+            <ion-toolbar>
+                <button ion-button icon-only>
+                    <img src="../assets/imgs/user.png" />
+                </button>
+            </ion-toolbar>
+        </ion-card-header>
+    </ion-card>
     <ion-card no-margin class="myAccount-details">
         <ion-card-header>
             <ion-toolbar>
@@ -26,7 +34,9 @@
         <ion-card-content>
             <ion-label no-margin>Contact Number</ion-label>
             <h1>{{details.phone}}</h1>
-            <ion-label no-margin>Location <span (click)="nextPage()">[Manage Address]</span></ion-label>
+            <ion-label no-margin>Location
+                <span (click)="nextPage()">[Manage Address]</span>
+            </ion-label>
             <h1>{{details.location}}</h1>
         </ion-card-content>
     </ion-card>

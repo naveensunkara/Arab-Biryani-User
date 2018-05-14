@@ -71,6 +71,12 @@ page-address {
             display: none;
             padding-left: 3rem;
             padding-right: 3rem;
+            .item-md {
+                background: transparent;
+                .item-inner {
+                    box-shadow: none;
+                }
+            }
             textarea {
                 border: 1px solid #ccc;
                 background: #fefefe;

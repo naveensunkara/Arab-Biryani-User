@@ -1,13 +1,17 @@
-<ion-header>
+<ion-header no-border>
     <ion-toolbar>
         <button ion-button icon-only menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title text-center>Notifications</ion-title>
+        <button ion-button icon-only class="notify">
+            <ion-icon name="md-notifications"></ion-icon>
+            <ion-badge item-end>3</ion-badge>
+        </button>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-card no-margin *ngFor="let item of notification" (click)="nextPage()">
+    <ion-card no-margin *ngFor="let item of notification" (click)="nextPage()" [class]="item.readStatus">
         <ion-card-header>
             <h1>{{item.title}}</h1>
         </ion-card-header>

@@ -1,10 +1,33 @@
 page-notification{
     ion-toolbar{
-        ion-title{
-            padding-right: 56px;
+        .toolbar-content{
+            display: flex;
+            .notify {
+                background: transparent;
+                box-shadow: none;
+                ion-badge.badge-md{
+                    padding: 4px 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    font-size: 1.1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 2px;
+                }
+            }
         }
     }
     ion-content{
+        ion-card{
+            border-bottom: 1px solid #ccc;
+            &.unread {
+                background: #fff;
+            }
+            &.read {
+                background: #efefef;
+            }
+        }
         ion-card.card-md{
             width: 100%;
             border: 1px solid #ccc;
@@ -35,6 +58,7 @@ page-notification{
                     }
                 }
             }
+            
         }
     }
 }

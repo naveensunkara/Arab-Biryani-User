@@ -2,23 +2,22 @@ import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { Config, Nav, Platform } from 'ionic-angular';
-
+import { Config, Nav, Platform, MenuController} from 'ionic-angular';
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 
 @Component({
   template: `<ion-menu [content]="content">
+    <ion-content>
     <ion-header>
-      <ion-toolbar>
-        <!--<ion-title>Arab Biryani</ion-title>-->
+      <ion-toolbar (click)="nextPage()">
         <button ion-button icon-only>
           <img src="../assets/imgs/user.png" />
         </button>
+        <ion-title>Ashley</ion-title>
+        <ion-title>+65 89745641</ion-title>
       </ion-toolbar>
     </ion-header>
-
-    <ion-content>
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           {{p.title}}
@@ -45,7 +44,12 @@ export class MyApp {
     { title: 'Log Out', component: 'LoginPage' }
   ]
 
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  nextPage(){
+    this.nav.setRoot('AccountPage');
+    this.menubar.close();
+  }
+
+  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, public menubar: MenuController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

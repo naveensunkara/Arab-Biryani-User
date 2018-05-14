@@ -20,7 +20,6 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
   <ion-list radio-group>
     <ion-item>
       <ion-radio item-left value="wallet" checked></ion-radio>
@@ -36,13 +35,16 @@
       </ion-label>
     </ion-item>
     <div class="address">
-        <textarea placeholder="Address"></textarea>
-        <button ion-button round float-right>Save</button>
-      </div>
+      <!-- <textarea placeholder="Address"></textarea> -->
+      <ion-item>
+        <ion-textarea placeholder="Address"></ion-textarea>
+      </ion-item>
+      <button ion-button round float-right>Save</button>
+    </div>
   </ion-list>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <button ion-button block (click)="nextPage()">Save</button>
+    <button ion-button block (click)="nextPage()">Set as Default Address</button>
   </ion-toolbar>
 </ion-footer>

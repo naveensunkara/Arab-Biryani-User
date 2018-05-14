@@ -63,6 +63,24 @@ page-my-account {
                     }
                 }
             }
+            ion-card.profile-pic {
+                width: 100%;
+                text-align: center;
+                position: static;
+                button.button-md {
+                    background: transparent;
+                    width: auto;
+                    height: auto;
+                    box-shadow: none;
+                    img{
+                        width: auto;
+                        height: 200px;
+                    }
+                }
+                .toolbar-content-md {
+                    padding: 10px 0;
+                }
+            }
         }
         
     }
