@@ -6,23 +6,39 @@
     <button ion-button icon-only (click)="goback()">
       <ion-icon name="ios-arrow-back"></ion-icon>
     </button>
-    <ion-title text-center>Branch Chat</ion-title>
+    <ion-title text-center>Chat</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content no-padding>
-  <div class="details" padding>
-    <div class="logo">A</div>
+  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" autoplay>
+    <ion-item ngxSlickItem no-padding class="slide menuItem" *ngFor="let slide of slides">
+      <ion-card no-margin>
+        <img src="{{ slide.img }}" />
+        <ion-card-content>
+          <ion-card-title no-padding>
+            {{slide.title}}
+            <p>{{slide.subhead}}</p>
+          </ion-card-title>
+          <p class="price">
+            SGD $ {{slide.price}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ngx-slick>
+  <!-- <div class="details" padding>
+    <div class="logo">C</div>
     <div class="restaurant" padding-left>
-      <h3>Street Food Restaurant</h3>
-      <h5>124, Baliester Rd, Singapore 345678</h5>
+      <h3>Arab Street Biriyani</h3>
+      <h5>#208, Anna Salai, Thousand Lights West, Chennai</h5>
     </div>
     <button ion-button small (click)="goback()">CLOSE</button>
-  </div>
+  </div> -->
   <div class="replySupport">
     <div class="image" padding text-center>
-      <div></div>Support</div>
+      <div></div>Branch Manager</div>
     <div class="reply">
       <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
       </p>
@@ -46,7 +62,7 @@
         <ion-input type="text" placeholder="Type here..."></ion-input>
         <button ion-button clear item-right>SEND</button>
       </ion-item>
-      
+
     </ion-list>
   </ion-toolbar>
 </ion-footer>

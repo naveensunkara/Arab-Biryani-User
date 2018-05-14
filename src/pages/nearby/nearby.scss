@@ -51,6 +51,9 @@ page-nearby {
                     font-weight: bold;
                 }
             }
+            ion-card[data-class="hide"]{
+                display: none;
+            }
             .logo {
                 float: left;
                 height: 30px;

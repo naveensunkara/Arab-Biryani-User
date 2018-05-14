@@ -92,12 +92,16 @@ page-track-order {
                     .rider-delivery {
                         font-size: 1.8rem;
                         text-align: center;
+                        display: none;
                     }
                 }
                 li.success {
                     color: #484848; 
                     background: url(../../assets/imgs/confirm.png) no-repeat left 3px;
                     background-size: auto 25px;
+                    .rider-delivery {
+                        display: block;
+                    }
                 }
             }
         }

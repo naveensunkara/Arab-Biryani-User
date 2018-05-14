@@ -13,6 +13,8 @@ export class NearbyPage {
   myLocation: any;
   map: any;
   userLocation: any;
+  branchHide: any = "show";
+  userInfoWindow: any;
   markers: Array<Object> = [];
   infowindow: Array<any> = [];
   image = {
@@ -60,10 +62,10 @@ export class NearbyPage {
           fillOpacity: 1
         }
       });
-      let infowindow = new google.maps.InfoWindow();
-      infowindow.setContent("You are here");
-      infowindow.open(this.map, this.userLocation);
-      this.nearbyPlace()
+      this.userInfoWindow = new google.maps.InfoWindow();
+      this.userInfoWindow.setContent("You are here");
+      this.userInfoWindow.open(this.map, this.userLocation);
+      this.nearbyPlace();
     })
   }
   nearbyPlace() {
@@ -100,13 +102,15 @@ export class NearbyPage {
     });
     this.infowindow.push(infowindow);
     google.maps.event.addListener(marker, 'click', () => {
-      this.openChat();
+      //this.openChat();
       for (var j = 0; j < this.infowindow.length; j++) {
         let temp = this.infowindow[j];
         temp.close();
       }
       this.ngZone.run(() => {
+        this.userInfoWindow.close();
         infowindow.open(this.map, marker);
+        this.branchHide = "hide";
       });
     });
   }

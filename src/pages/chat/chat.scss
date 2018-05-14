@@ -16,12 +16,13 @@ page-chat {
     
     .logo {
         float: left;
-        height: 40px;
-        width: 30px;
+        height: 30px;
+        width: 35px;
         background: url(/assets/imgs/pointer-app.png) no-repeat;
         background-size: contain;
-        padding-left: 9px;
-        padding-top: 4px;
+        margin-right: 5px;
+        padding-top: 2px;
+        text-align: center;
       }
       .details{
           display: flex;
@@ -40,13 +41,14 @@ page-chat {
               color:#999;
           }
       }
+      
       .replySupport, .replyYou{
           display: flex;
           margin: 20px 0;
           .image > div{
             height: 50px;
             width: 50px;
-            border: 2px solid rgba(0, 0, 0, 0.5);
+            // border: 2px solid rgba(0, 0, 0, 0.5);
             border-radius: 15px;
             background: white;
           }
@@ -56,6 +58,18 @@ page-chat {
               border: 2px solid #999;
           }
       }
+      .replySupport {
+        .image > div {
+            background: url(../../assets/imgs/support.png) no-repeat;
+            background-size: cover; 
+        }
+    }
+    .replyYou {
+        .image > div {
+            background: url(../../assets/imgs/man.png) no-repeat;
+            background-size: cover; 
+        }
+    }
       .replyYou{
           flex-direction: row-reverse;
           .reply{
@@ -68,17 +82,58 @@ page-chat {
               height: 56px;
               .item-inner{
                   padding-left: 10px;
+                  padding-right: 0px !important;
               }
               button.button-md{
-                  height: 56px;
-                  margin: 0;
+                  height: 100% !important;
+                  margin: 0 !important;
                   background: #fea20f;
                   color: #000;
                   font-weight: bold;
+                  font-size: 1.8rem !important;
               }
           }
       }
       ion-content{
           background: azure !important;
+          .slick-track {
+              .item-inner {
+                  padding: 0 !important;
+                  ion-label {
+                      margin: 0px;
+                      ion-card {
+                          width: 100%;
+                          img {
+                            height: 220px;
+                          }
+                          ion-card-content {
+                              background: rgba(0,0,0,0.5);
+                              position: absolute;
+                              bottom: 0px;
+                              left: 0px;
+                              width: 100%;
+                              ion-card-title{
+                                  color: #fff;
+                                  width: 70%;
+                                  display: inline-block;
+                                  vertical-align: middle;
+                                  p{
+                                    color: #fff;
+                                    display: block; 
+                                    font-size: 1.4rem;   
+                                  }
+                              }
+                              p{
+                                  color: #fff;
+                                  width: 30%;
+                                  display: inline-block;
+                                  vertical-align: middle;
+                                  font-size: 2.125rem;
+                                }
+                          }
+                      } 
+                  }
+              }
+          }
       }
 }
