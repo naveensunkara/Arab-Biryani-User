@@ -27,8 +27,33 @@ page-track-order {
                 margin:0px;
                 position: static;
                 width: 100%;
-            }  
+            }
         }
+        .rate-us {
+            font-size: 2rem;
+            padding: 0 1rem;
+            text-align: center;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        rating {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        ul {
+            margin: 5px 0px;
+            padding: 0px;
+            &.rating li {
+              padding: 5px 2px !important;
+              background: none;
+              color: #ffb400;
+              ion-icon {
+                font-size: 40px;
+              }
+            }
+          }  
     }
     ion-card.card-md {
         width: 100%;
@@ -75,7 +100,6 @@ page-track-order {
                     background-size: auto 25px;
                 }
             }
-            
         }
     }
     ion-card-content {
@@ -96,6 +120,20 @@ page-track-order {
             }
             td:last-child {
                 text-align: right;
+            }
+        }
+        .order-list {
+            margin-top: 1rem;
+            h3{
+                font-size: 1.8rem;
+                color: #95989a;
+                margin-bottom: 16px;
+            }
+            div h1 {
+                width: 49%;
+                display: inline-block;
+                margin-bottom: 16px;
+                font-size: 1.8rem;
             }
         }
     }

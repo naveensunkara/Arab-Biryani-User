@@ -29,6 +29,25 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="order-list">
+                <h3>Orders</h3>
+                <div>
+                    <h1>Chicken Biriyani</h1>
+                    <h1 text-right>x 2</h1>
+                </div>
+                <div>
+                    <h1>Mutton Biriyani</h1>
+                    <h1 text-right>x 1</h1>
+                </div>
+                <div>
+                    <h1>Egg Biriyani</h1>
+                    <h1 text-right>x 1</h1>
+                </div>
+                <div margin-top>
+                    <h1><strong>Total</strong></h1>
+                    <h1 text-right><strong>$44.56</strong></h1>
+                </div>
+            </div>
         </ion-card-content>
     </ion-card>
     <ion-card no-margin class="order-status">
@@ -50,6 +69,11 @@
     </ion-card>
 </ion-content>
 <ion-footer>
+    <div class="rate-us">
+        <span>Rate our service</span>
+        <rating value="2" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star"
+            nullable="false" no-margin></rating>
+    </div>
     <ion-toolbar>
         <ion-buttons left padding-horizontal>
             <button ion-button block (click)="ordersPage()">Back to Orders</button>

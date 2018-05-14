@@ -5,17 +5,17 @@ page-notification{
             .notify {
                 background: transparent;
                 box-shadow: none;
-                ion-badge.badge-md{
-                    padding: 4px 0;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    font-size: 1.1rem;
-                    position: absolute;
-                    top: 0;
-                    right: 2px;
-                }
             }
+        }
+        ion-badge.badge-md{
+            padding: 4px 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            position: absolute;
+            top: 0;
+            right: 2px;
         }
     }
     ion-content{
