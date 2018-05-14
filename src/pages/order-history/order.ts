@@ -62,6 +62,6 @@ export class OrderPage {
         console.log(this.order)
     }
     nextpage(){
-        this.navCtrl.push('TrackPage');
+        this.navCtrl.push('TrackCompletePage');
     }
 }

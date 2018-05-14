@@ -30,12 +30,12 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-buttons left padding-horizontal>
+    <ion-buttons left padding-horizontal *ngIf="cart == 0">
       <button ion-button (click)="findBiriyani()">Find Biriyani</button>
     </ion-buttons>
-    <ion-buttons right padding-horizontal active>
+    <ion-buttons right padding-horizontal active *ngIf="cart == 0">
       <button ion-button>Book Biryani</button>
     </ion-buttons>
-    <button ion-button block (click)="placeOrder(menuItems)">Proceed to checkout</button>
+    <button ion-button block (click)="placeOrder(menuItems)" *ngIf="cart != 0">Proceed to checkout</button>
   </ion-toolbar>
 </ion-footer>

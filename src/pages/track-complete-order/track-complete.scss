@@ -1,0 +1,147 @@
+page-track-complete-order {
+    ion-toolbar {
+        .toolbar-content {
+            .button-md {
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+            }
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            .toolbar-background-md {
+                background: #fea20f;
+            }
+            ion-buttons {
+                width: 50%;
+            }
+            button {
+                background: #fea20f;
+                color: #333;
+                font-size: 2rem;
+                font-weight: 700;
+                height: 6rem;
+                margin:0px;
+                position: static;
+                width: 100%;
+            }
+        }
+        .rate-us {
+            font-size: 2rem;
+            padding: 0 1rem;
+            text-align: center;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        rating {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        ul {
+            margin: 5px 0px;
+            padding: 0px;
+            &.rating li {
+              padding: 5px 2px !important;
+              background: none;
+              color: #ffb400;
+              ion-icon {
+                font-size: 40px;
+              }
+            }
+          }  
+    }
+    ion-card.card-md {
+        width: 100%;
+        ion-card-header {
+            font-size: 2.25rem;
+            color: #95989a;
+            padding-left: 3rem;
+            h1.orderId {
+                font-size: 2.5rem;
+                color: #5e5e5e;
+                font-weight: 700;
+                display: inline-block;
+                padding-left: 3rem;
+            }
+        }
+    }
+    ion-card.order-status{
+        background: transparent;
+        box-shadow: none;
+        padding: 1rem 2rem 0; 
+        ion-card-header{
+            border-bottom: 3px solid #e6e6e6;
+            color: #333; 
+        }
+        ion-card-content {
+            color: #95989a;
+            font-size: 2.125rem;
+            ul {
+                padding-left: 1rem;
+                li {
+                    list-style: none;
+                    background: url(../../assets/imgs/circumference.png) no-repeat left 3px;
+                    background-size: auto 25px;
+                    padding-left: 4rem;
+                    margin-bottom: 1.5rem; 
+                    .rider-delivery {
+                        font-size: 1.8rem;
+                        text-align: center;
+                        display: none;
+                    }
+                }
+                li.success {
+                    color: #484848; 
+                    background: url(../../assets/imgs/confirm.png) no-repeat left 3px;
+                    background-size: auto 25px;
+                    .rider-delivery {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    ion-card-content {
+        table {
+            text-align: center;
+            font-size: 2.25rem;
+            th{
+                font-weight: normal;
+                color: #95989a;
+            }
+            td {
+                color: #5e5e5e;
+                font-weight: 700;
+                font-size: 2.25rem;
+            }
+            th:last-child {
+                text-align: right;
+            }
+            td:last-child {
+                text-align: right;
+            }
+        }
+        .order-list {
+            margin-top: 1rem;
+            h3{
+                font-size: 1.8rem;
+                color: #95989a;
+                margin-bottom: 16px;
+            }
+            div h1 {
+                width: 49%;
+                display: inline-block;
+                margin-bottom: 16px;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .scroll-content {
+        background: #efefef;
+    }
+}

@@ -21,7 +21,7 @@
 
 <ion-content>
     <div class="ongoing" *ngIf="order == 'ongoing'">
-        <ion-card no-margin (click)="nextpage()">
+        <ion-card no-margin (click)="trackPage('TrackPage')">
             <ion-card-header>
                 <h1 class="orderId" >Order # 1101109</h1>
                 <ion-badge item-end>PACKING</ion-badge>
@@ -45,7 +45,7 @@
                 </table>
             </ion-card-content>
         </ion-card>
-        <ion-card no-margin (click)="nextpage()">
+        <ion-card no-margin (click)="trackPage('TrackPage')">
             <ion-card-header>
                 <h1 class="orderId" >Order # 1101110</h1>
                 <ion-badge item-end class="success">Out for Delivery</ion-badge>

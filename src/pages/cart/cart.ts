@@ -113,7 +113,7 @@ export class CartPage {
         this.navCtrl.push('AddressPage');
     }
     goBack(){
-        this.navCtrl.pop();
+        this.navCtrl.pop(); 
     }
     discount() {
         this.cartCount();
