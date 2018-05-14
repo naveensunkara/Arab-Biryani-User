@@ -24,5 +24,7 @@ export class AddressPage {
   nextPage() {
     this.navCtrl.push('PaymentPage');
   }
-
+  goBack() {
+    this.navCtrl.pop();
+  }
 }

@@ -2,6 +2,10 @@ page-address {
     ion-toolbar{
         .toolbar-content{
             display: flex;
+            button{
+                background: transparent;
+                box-shadow: none;
+            }
             .cart{
                 background: transparent;
                 box-shadow: none;

@@ -3,8 +3,12 @@
 }
 page-menu-popup {
     ion-content{
+        background: transparent !important;
         .scroll-content{
             padding: 5px;
+            .popup-bg {
+                background: #fff;
+            }
             .subhead{
                 border-bottom: 1px solid #ccc;
             }

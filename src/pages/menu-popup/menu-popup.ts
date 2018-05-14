@@ -56,6 +56,6 @@ export class MenuPopupPage {
     let index = this.params[this.itemIndex].quantity;
     this.currentCount[this.itemIndex] = index;
     console.log(this.currentCount)
-    //this.events.publish('modal:finished', 'yourpage');
+    this.events.publish('cart:change', 'MenuPage', this.params);
   }
 }

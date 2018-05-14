@@ -112,6 +112,9 @@ export class CartPage {
     nextPage() {
         this.navCtrl.push('AddressPage');
     }
+    goBack(){
+        this.navCtrl.pop();
+    }
     discount() {
         this.cartCount();
         if (this.coupon == '10percent'){

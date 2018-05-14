@@ -1,22 +1,26 @@
 <ion-content>
-  <img [src]='params[itemIndex].imgSrc' height="200px" width="100%">
-  <h1 padding-left>{{params[itemIndex].title}}</h1>
-  <p padding-left no-margin padding-bottom class="subhead">{{params[itemIndex].subhead}}</p>
-  <div class="flexbox">
-    <h3 class="label" text-left>Qty</h3>
-    <div class="quantity-group">
-      <button ion-button icon-only (click)="add()" class="add-btn">
-        <ion-icon name="add"></ion-icon>
-      </button>
-      <input type="number" [(ngModel)]="params[itemIndex].quantity" class="quantity" (change)="cartCount()">
-      <button ion-button icon-only (click)="remove()" class="remove-btn">
-        <ion-icon name="md-remove"></ion-icon>
-      </button>
+  <div class="popup-bg">
+    <img [src]='params[itemIndex].imgSrc' height="200px" width="100%">
+    <h1 padding-left>{{params[itemIndex].title}}</h1>
+    <p padding-left no-margin padding-bottom class="subhead">{{params[itemIndex].subhead}}</p>
+    <div class="flexbox">
+      <h3 class="label" text-left>Qty</h3>
+      <div class="quantity-group">
+        <button ion-button icon-only (click)="add()" class="add-btn">
+          <ion-icon name="add"></ion-icon>
+        </button>
+        <input type="number" [(ngModel)]="params[itemIndex].quantity" class="quantity" (change)="cartCount()">
+        <button ion-button icon-only (click)="remove()" class="remove-btn">
+          <ion-icon name="md-remove"></ion-icon>
+        </button>
+      </div>
+      <h3 class="label" text-right>SGD $
+        <span>{{parse(params[itemIndex].quantity * params[itemIndex].price)}}</span>
+      </h3>
     </div>
-    <h3 class="label" text-right>SGD $ <span>{{parse(params[itemIndex].quantity * params[itemIndex].price)}}</span></h3>
-  </div>
-  <div class="button-group">
-    <button ion-button (click)="close()">Close</button>
-    <button ion-button (click)="cartPage()">Add to Cart</button>
+    <div class="button-group">
+      <button ion-button (click)="close()">Close</button>
+      <button ion-button (click)="cartPage()">Add to Cart</button>
+    </div>
   </div>
 </ion-content>

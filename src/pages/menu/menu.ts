@@ -46,11 +46,13 @@ export class MenuPage {
     }
   ]
   constructor(public navCtrl: NavController, public alertCtrl: ModalController, public viewCtrl: ViewController, events: Events) {
-    // events.subscribe('modal:finished', (page) => {
-    //   if(page == 'yourpage') {
-    //     this.navCtrl.push('CartPage', {items: this.menuItems});
-    //   }
-    // });
+    events.subscribe('cart:change', (page, menu) => {
+      if(page == 'MenuPage') {
+        //this.navCtrl.push('CartPage', {items: this.menuItems});
+        this.menuItems = menu;
+        this.cartCount();
+      }
+    });
   }
 
   ionViewDidLoad() {

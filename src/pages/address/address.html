@@ -6,8 +6,8 @@
 -->
 <ion-header no-border>
   <ion-toolbar>
-    <button ion-button icon-only menuToggle (click)="menu()">
-      <ion-icon name="menu"></ion-icon>
+    <button ion-button icon-only (click)="goBack()">
+      <ion-icon name="ios-arrow-back"></ion-icon>
     </button>
     <ion-title text-center> Delivery Address</ion-title>
     <button ion-button icon-only class="cart" (click)="placeOrder(menuItems)">
@@ -33,11 +33,11 @@
       </ion-label>
     </ion-item>
     <div class="address">
-        <ion-item>
-            <ion-textarea placeholder="Address"></ion-textarea>
-          </ion-item>
-        <button ion-button round float-right>Save</button>
-      </div>
+      <ion-item>
+        <ion-textarea placeholder="Address"></ion-textarea>
+      </ion-item>
+      <button ion-button round float-right>Save</button>
+    </div>
   </ion-list>
 </ion-content>
 <ion-footer>
