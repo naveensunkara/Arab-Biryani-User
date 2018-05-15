@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, Events } from 'ionic-angular';
 
 /**
  * Generated class for the RateChatPage page.
@@ -15,15 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RateChatPage {
   thankyou: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,public events: Events) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RateChatPage');
   }
-  nextPage(){
-    setTimeout(() => {
-      this.navCtrl.push('NearbyPage');
-    }, 1000);
+  nextPage() {
+    this.viewCtrl.dismiss().then(()=>{
+      setTimeout(()=>{
+        this.events.publish('chat:close','ChatPage');
+      },500)
+    })
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { PopoverController } from 'ionic-angular';
 import * as $ from "jquery";
 import 'slick-carousel/slick/slick';
@@ -51,9 +51,12 @@ export class ChatPage {
   ];
   slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
-    //console.log($);
-    //$(".slider").slick();
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController, public events: Events) {
+    events.subscribe('chat:close', (page) => {
+      if(page == 'ChatPage'){
+        this.navCtrl.push('NearbyPage');
+      }
+    })
   }
 
   ionViewDidLoad() {
