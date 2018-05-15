@@ -49,7 +49,7 @@ export class ChatPage {
       subhead : 'Gravy, Raita and Boiled EGG'
     }
   ];
-  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "autoplay": "true", "autoplaySpeed": "1500"};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController, public events: Events) {
     events.subscribe('chat:close', (page) => {

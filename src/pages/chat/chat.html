@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content no-padding>
-  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" autoplay>
+  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
     <ion-item ngxSlickItem no-padding class="slide menuItem" *ngFor="let slide of slides">
       <ion-card no-margin>
         <img src="{{ slide.img }}" />
