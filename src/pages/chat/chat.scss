@@ -1,15 +1,19 @@
 page-chat {
     ion-header{
         ion-toolbar{
-            .button-md {
-                background: transparent;
-                box-shadow: none;
-                position: absolute;
-                top: 8px;
-                z-index: 10;
-            }
-            ion-title{
-                padding-right: 56px;
+            .toolbar-content {
+                display: flex;
+                ion-title {
+                    padding-left: 36px;
+                }
+                button{
+                    background: transparent;
+                    box-shadow: none;
+                }
+                .exit{
+                    background: transparent;
+                    box-shadow: none;
+                }
             }
         }
     }
@@ -45,9 +49,11 @@ page-chat {
       .replySupport, .replyYou{
           display: flex;
           margin: 20px 0;
+          font-size: 1.8rem;
           .image > div{
             height: 50px;
             width: 50px;
+            margin: auto;
             // border: 2px solid rgba(0, 0, 0, 0.5);
             border-radius: 15px;
             background: white;
@@ -136,4 +142,8 @@ page-chat {
               }
           }
       }
+      
+}
+ion-popover {
+    background: rgba(0,0,0,0.5);
 }

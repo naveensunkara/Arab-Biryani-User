@@ -1,16 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <!-- <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button> -->
-    <button ion-button icon-only (click)="goback()">
-      <ion-icon name="ios-arrow-back"></ion-icon>
-    </button>
     <ion-title text-center>Chat</ion-title>
+    <button ion-button icon-only class="exit" (click)="presentPopover()">
+      <ion-icon name="md-close"></ion-icon>
+    </button>
   </ion-toolbar>
 </ion-header>
-
-
 <ion-content no-padding>
   <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" autoplay>
     <ion-item ngxSlickItem no-padding class="slide menuItem" *ngFor="let slide of slides">
@@ -28,14 +23,6 @@
       </ion-card>
     </ion-item>
   </ngx-slick>
-  <!-- <div class="details" padding>
-    <div class="logo">C</div>
-    <div class="restaurant" padding-left>
-      <h3>Arab Street Biriyani</h3>
-      <h5>#208, Anna Salai, Thousand Lights West, Chennai</h5>
-    </div>
-    <button ion-button small (click)="goback()">CLOSE</button>
-  </div> -->
   <div class="replySupport">
     <div class="image" padding text-center>
       <div></div>Branch Manager</div>
@@ -52,17 +39,14 @@
       </p>
     </div>
   </div>
-
 </ion-content>
 <ion-footer>
   <ion-toolbar no-padding>
     <ion-list no-margin>
-
       <ion-item no-padding float-right>
         <ion-input type="text" placeholder="Type here..."></ion-input>
         <button ion-button clear item-right>SEND</button>
       </ion-item>
-
     </ion-list>
   </ion-toolbar>
 </ion-footer>

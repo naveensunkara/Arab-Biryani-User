@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { PopoverController } from 'ionic-angular';
 import * as $ from "jquery";
 import 'slick-carousel/slick/slick';
 
@@ -17,7 +17,6 @@ import 'slick-carousel/slick/slick';
   templateUrl: 'chat.html',
 })
 export class ChatPage {
-
   slides = [
     {
       img: "/assets/imgs/chicken-biryani1.jpg", 
@@ -52,7 +51,7 @@ export class ChatPage {
   ];
   slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
     //console.log($);
     //$(".slider").slick();
   }
@@ -60,8 +59,12 @@ export class ChatPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');
   }
-  goback(){
-    this.navCtrl.pop();
+  // goback(){
+  //   //this.navCtrl.pop();
+  //   this.navCtrl.push('RateChatPage');
+  // }
+  presentPopover() {
+    let popover = this.popoverCtrl.create('RateChatPage');
+    popover.present();
   }
-
 }
