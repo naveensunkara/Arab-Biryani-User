@@ -8,6 +8,7 @@ import { IonicPage, Nav, NavController } from 'ionic-angular';
 })
 
 export class OrderPage {
+    //rate: any = 4;
     order: any = 'ongoing';
     completedOrders: any= [
         {
@@ -16,7 +17,8 @@ export class OrderPage {
             quantity: 50,
             deliverydate: "07 May 2018",
             total: 75.34,
-            date: 'On 25, Apr, 2018 11:47 PM'
+            date: 'On 25, Apr, 2018 11:47 PM',
+            rate: 4
         },
         {
             orderId: 'PO# 1101108',
@@ -24,7 +26,8 @@ export class OrderPage {
             quantity: 60,
             deliverydate: "05 May 2018",
             total: 45.34,
-            date: 'On 24, Apr, 2018 09:30 PM'
+            date: 'On 24, Apr, 2018 09:30 PM',
+            rate: 5
         },
         {
             orderId: 'PO# 1101107',
@@ -32,7 +35,8 @@ export class OrderPage {
             quantity: 25,
             deliverydate: "03 May 2018",
             total: 65.75,
-            date: 'On 23 Apr, 2018 06:05 PM'
+            date: 'On 23 Apr, 2018 06:05 PM',
+            rate: 3
         },
         {
             orderId: 'PO# 1101107',
@@ -40,7 +44,8 @@ export class OrderPage {
             quantity: 25,
             deliverydate: "03 May 2018",
             total: 65.75,
-            date: 'On 23 Apr, 2018 06:05 PM'
+            date: 'On 23 Apr, 2018 06:05 PM',
+            rate: 5
         },
         {
             orderId: 'PO# 1101107',
@@ -48,7 +53,8 @@ export class OrderPage {
             quantity: 25,
             deliverydate: "03 May 2018",
             total: 65.75,
-            date: 'On 23 Apr, 2018 06:05 PM'
+            date: 'On 23 Apr, 2018 06:05 PM',
+            rate: 4
         }
     ]
     constructor(public navCtrl: NavController) { }

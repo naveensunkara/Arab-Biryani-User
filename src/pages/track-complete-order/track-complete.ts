@@ -8,6 +8,7 @@ import { IonicPage, Nav, NavController } from 'ionic-angular';
 })
 
 export class TrackCompletePage {
+  rate: any = 4;
   constructor(public navCtrl: NavController) { }
 
   backButtonClick() {

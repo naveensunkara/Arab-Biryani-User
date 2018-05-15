@@ -23,6 +23,7 @@ export class RateChatPage {
   }
   nextPage() {
     this.viewCtrl.dismiss().then(()=>{
+
       setTimeout(()=>{
         this.events.publish('chat:close','ChatPage');
       },500)
