@@ -17,6 +17,7 @@ export class NearbyPage {
   userInfoWindow: any;
   markers: Array<Object> = [];
   infowindow: Array<any> = [];
+  nearbyPlaces: any;
   image = {
     url: '/assets/imgs/pointer-app.png',
     size: new google.maps.Size(71, 71),
@@ -29,7 +30,7 @@ export class NearbyPage {
   }
 
   ionViewDidLoad() {
-    this.loadMap()
+    this.loadMap();
   }
 
   loadMap() {
@@ -77,6 +78,7 @@ export class NearbyPage {
       name: ['AASIFE']
     }, (results, status) => {
       this.callback(results, status);
+      this.nearbyPlaces = results;
     });
   }
 
@@ -101,16 +103,17 @@ export class NearbyPage {
       content: '<h3>Arab Street Biriyani</h3><h6>Location</h6><h6 style="width:200px">' + place.vicinity + '</h6><p>Rating: ' + place.rating + '</p>'
     });
     this.infowindow.push(infowindow);
-    google.maps.event.addListener(marker, 'click', () => {
+    google.maps.event.addListener(marker, 'click', (event) => {
       //this.openChat();
       for (var j = 0; j < this.infowindow.length; j++) {
         let temp = this.infowindow[j];
         temp.close();
+        this.nearbyPlaces[j].branchHide = "hide";
       }
       this.ngZone.run(() => {
         this.userInfoWindow.close();
         infowindow.open(this.map, marker);
-        this.branchHide = "hide";
+        this.nearbyPlaces[index].branchHide = "show";
       });
     });
   }

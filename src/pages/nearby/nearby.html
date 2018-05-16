@@ -9,17 +9,30 @@
     <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-   
+
     <ion-title text-center>Near by Restaurant</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content no-padding>
-  <ion-searchbar id="storeLocator" #place  no-padding></ion-searchbar>
+  <ion-searchbar id="storeLocator" #place no-padding></ion-searchbar>
   <div #map id="map"></div>
   <div class="branchList">
-    <ion-card no-margin [attr.data-class]="branchHide">
+    <ion-card no-margin [attr.data-class]="place.branchHide" *ngFor="let place of nearbyPlaces; index as i">
+      <ion-card-header>
+        <div class="logo">{{labels[i]}}</div>
+        <h1>Street Food Restaurant</h1>
+        <button ion-button icon-only *ngIf="nearbyPlaces[i+1].branchHide == 'hide'">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+      </ion-card-header>
+      <ion-card-content>
+        <h2>{{place.vicinity}}</h2>
+        <button ion-button round small (click)="openChat()" class="disable-hover">Start Chat</button>
+      </ion-card-content>
+    </ion-card>
+    <!-- <ion-card no-margin [attr.data-class]="branchHide">
       <ion-card-header>
         <div class="logo">A</div>
         <h1>Street Food Restaurant</h1>
@@ -50,6 +63,6 @@
               <h2>#208, Anna Salai, Thousand Lights West, Chennai</h2>
               <button ion-button round small (click)="openChat()" class="disable-hover">Start Chat</button>
           </ion-card-content>
-        </ion-card>
+        </ion-card> -->
   </div>
 </ion-content>

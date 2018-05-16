@@ -1,3 +1,6 @@
+.alert-md .alert-message{
+    padding-bottom: 0 !important;
+}
 page-my-account {
     ion-header {
         ion-toolbar {
@@ -17,7 +20,7 @@ page-my-account {
                     color: #333;
                     font-size: 2rem;
                     font-weight: 700;
-                    height: 6rem;
+                    height: 56px;
                     margin:0px;
                     position: static;
                 }  

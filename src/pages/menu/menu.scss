@@ -2,7 +2,6 @@ ion-modal.customModal{
     position: relative;
     .modal-wrapper{
         width: 90%;
-        height: 55%;
         top: 25%;
         left: 5%;
         position: absolute;
@@ -17,8 +16,8 @@ page-menu {
                 box-shadow: none;
                 ion-badge.badge-md{
                     padding: 4px 0;
-                    width: 20px;
-                    height: 20px;
+                    width: 2rem;
+                    height: 2rem;
                     border-radius: 50%;
                     font-size: 1.1rem;
                     position: absolute;
@@ -47,7 +46,7 @@ page-menu {
                     }
                 }
             }
-            button {
+            button.button-md {
                 background: #fea20f;
                 color: #333;
                 font-size: 2rem;

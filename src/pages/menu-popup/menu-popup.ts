@@ -19,25 +19,22 @@ export class MenuPopupPage {
 
 
   ionViewDidLoad() {
+    this.currentCount[this.itemIndex] = this.params[this.itemIndex].quantity;
   }
 
   add(){
     this.params[this.itemIndex].quantity++;
-    this.cartCount();
   }
 
   remove(){
     if(this.params[this.itemIndex].quantity > 0){
       this.params[this.itemIndex].quantity--;
-      this.cartCount();
     }
   }
   close(){
     this.viewCtrl.dismiss();
-    console.log(this.currentCount)
     this.params[this.itemIndex].quantity = this.currentCount[this.itemIndex];
     this.cartCount();
-
   }
   parse(a){
     let c = String(a);
@@ -55,7 +52,6 @@ export class MenuPopupPage {
     this.viewCtrl.dismiss();
     let index = this.params[this.itemIndex].quantity;
     this.currentCount[this.itemIndex] = index;
-    console.log(this.currentCount)
     this.events.publish('cart:change', 'MenuPage', this.params);
   }
 }

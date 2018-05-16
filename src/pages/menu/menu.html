@@ -36,6 +36,6 @@
     <ion-buttons right padding-horizontal active *ngIf="cart == 0">
       <button ion-button>Book Biryani</button>
     </ion-buttons>
-    <button ion-button block (click)="placeOrder(menuItems)" *ngIf="cart != 0">Proceed to checkout</button>
+    <button ion-button block class="disable-hover" (click)="placeOrder(menuItems)" *ngIf="cart != 0">Proceed to checkout</button>
   </ion-toolbar>
 </ion-footer>
