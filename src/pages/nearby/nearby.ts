@@ -25,6 +25,7 @@ export class NearbyPage {
     anchor: new google.maps.Point(17, 34),
     scaledSize: new google.maps.Size(25, 25)
   };
+  showFlag: boolean = false;
   labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation, public ngZone: NgZone) {
   }
@@ -117,10 +118,16 @@ export class NearbyPage {
       });
     });
   }
-  openChat(){
+  openChat() {
     this.navCtrl.push('ChatPage');
   }
   backButtonClick() {
     this.navCtrl.pop();
+  }
+  showAll() {
+    this.showFlag = false;
+    this.nearbyPlaces.forEach(element => {
+      element.branchHide = "show";
+    });
   }
 }
