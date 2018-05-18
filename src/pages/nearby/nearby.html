@@ -23,15 +23,16 @@
       <ion-card-header>
         <div class="logo">{{labels[i]}}</div>
         <h1>Street Food Restaurant</h1>
-        <button ion-button icon-only *ngIf="nearbyPlaces[i+1].branchHide == 'hide'">
-          <ion-icon name="md-close"></ion-icon>
-        </button>
       </ion-card-header>
       <ion-card-content>
         <h2>{{place.vicinity}}</h2>
         <button ion-button round small (click)="openChat()" class="disable-hover">Start Chat</button>
       </ion-card-content>
     </ion-card>
+    <button ion-button icon-left class="showAll disable-hover" (click)="showAll()" *ngIf="showFlag">
+      <ion-icon name="md-close"></ion-icon>
+      Back to List
+    </button>
     <!-- <ion-card no-margin [attr.data-class]="branchHide">
       <ion-card-header>
         <div class="logo">A</div>

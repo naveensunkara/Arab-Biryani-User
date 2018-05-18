@@ -28,6 +28,14 @@ page-nearby {
         .branchList{
             max-height: 50%;
             overflow: scroll;
+            button.button-md{
+                background: #fea20f;
+                color: #000;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                font-weight: bold;
+            }
             ion-card.card-md{
                 width: 100%;
                 border: 1px solid #dedede;
