@@ -1,18 +1,46 @@
-<!--
-  Generated template for the ViewTicketPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>view-ticket</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>TKT #3003-011</ion-title>
+  </ion-toolbar>
 </ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item class="header" padding-top>
+      <h1>Ticket Description</h1>
+      <ion-badge item-end>OPEN</ion-badge>
+      <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+    </ion-item>
+    <ion-item class="support" margin-top>
+      <div class="chatbox">
+        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+        <ion-badge><ion-icon name="md-attach"></ion-icon>ATTACHMENT</ion-badge>
+      </div>
+      <div class="details">
+        <span class="date">On 25, Apr, 2018 11:47 PM</span>
+        <span class="recipient" float-right>SUPPORT</span>
+      </div>
+    </ion-item>
+    <ion-item class="you" margin-top>
+        <div class="chatbox">
+          <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+        </div>
+        <div class="details">
+          <span class="date">On 25, Apr, 2018 11:47 PM</span>
+          <span class="recipient" float-right>YOU</span>
+        </div>
+      </ion-item>
+  </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-toolbar no-padding>
+    <ion-list no-margin>
+      <ion-item no-padding float-right>
+        <ion-input type="text" placeholder="Type here..."></ion-input>
+        <button ion-button clear item-right>SEND</button>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>
