@@ -1,3 +1,55 @@
 page-create-ticket {
-
+    ion-toolbar{
+        ion-title{
+            padding-right: 56px;
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                button {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 56px;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
+    ion-content{
+        .card-md{
+            min-height: calc(100% - 20px);
+            border: 1px solid #333;
+            ion-card-header h1{
+                padding-bottom: 5px;
+                border-bottom: 1px solid #333;
+            }
+            ion-card-content{
+                ion-item.item-md{
+                    padding: 16px 0 0 0;
+                    .input-md, .select-md{
+                        border-bottom: 1px solid #333;
+                    }
+                    ion-textarea.input-md{
+                        border: 1px solid #333;
+                        padding: 10px;
+                        height: 120px;
+                        margin-top: 10px;
+                    }
+                    .label-md, .text-input-md{
+                        font-size: 2rem;
+                        color: black;
+                        &textarea{
+                            border: 1px solid #333;
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
