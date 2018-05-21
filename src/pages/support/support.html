@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Support</ion-title>
+  </ion-toolbar>
+  <ion-segment [(ngModel)]="category" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="all">
+      All
+    </ion-segment-button>
+    <ion-segment-button value="open">
+      Open
+    </ion-segment-button>
+    <ion-segment-button value="closed">
+      Closed
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content>
+
+  <div class="history">
+    <ion-card no-margin *ngFor="let item of tempArr" (click)="nextpage()">
+      <ion-card-header>
+        <h1>{{item.ticketNo}}</h1>
+        <ion-badge item-end class="{{item.status}} badge-md">{{item.status}}</ion-badge>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          <span>{{item.reason}}</span>
+          <span class="comments" float-right>{{item.comments}}</span>
+          <br>
+          <span class="commentLabel" float-right>COMMENTS</span>
+        </p>
+
+        <p class="date">{{item.date}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+      <button ion-button block (click)="nextpage()">Create Ticket</button>
+  </ion-toolbar>
+</ion-footer>
