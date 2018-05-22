@@ -7,7 +7,7 @@ import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 
 @Component({
-  template: `<ion-menu [content]="content">
+  template: `<ion-menu [content]="content" [swipeEnabled]="swipe">
     <ion-content>
     <ion-header>
       <ion-toolbar (click)="nextPage()">
@@ -30,7 +30,7 @@ import { Settings } from '../providers';
 })
 export class MyApp {
   rootPage = FirstRunPage;
-
+  swipe: boolean = false;
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
@@ -40,7 +40,7 @@ export class MyApp {
     { title: 'Payment History', component: 'PaymentHistoryPage' },
     { title: 'My Account', component: 'AccountPage' },
     { title: 'Notification', component: 'NotificationPage' },
-    //{ title: 'Support', component: 'AccountPage' },
+    { title: 'Support', component: 'SupportPage' },
     { title: 'Log Out', component: 'LoginPage' }
   ]
 

@@ -22,4 +22,35 @@ page-view-ticket {
             }
         }
     }
+    ion-item.item-md{
+        .item-inner{
+            border-bottom: 0 !important;
+        }
+        ion-label{
+            white-space: normal;
+            position: relative;
+            .chatbox {
+                border: 1px solid #333;
+                padding: 10px;
+                margin-bottom: 10px;
+                p + .badge-md{
+                    margin-top: 10px;
+                }
+            }
+            p{
+                font-size: 1.8rem;
+            }
+            ion-badge.badge-md{
+                font-size: 1.4rem;
+                color: white;
+                padding: 5px 10px;
+                &.status{
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    background: #9d3aff;
+                }
+            }
+        }
+    }
 }

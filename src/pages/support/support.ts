@@ -48,5 +48,7 @@ export class SupportPage {
   nextpage() {
     this.navCtrl.push('CreateTicketPage');
   }
-
+  viewTicket(){
+    this.navCtrl.push('ViewTicketPage');
+  }
 }

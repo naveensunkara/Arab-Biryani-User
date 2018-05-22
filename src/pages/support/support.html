@@ -20,7 +20,7 @@
 <ion-content>
 
   <div class="history">
-    <ion-card no-margin *ngFor="let item of tempArr" (click)="nextpage()">
+    <ion-card no-margin *ngFor="let item of tempArr" (click)="viewTicket()">
       <ion-card-header>
         <h1>{{item.ticketNo}}</h1>
         <ion-badge item-end class="{{item.status}} badge-md">{{item.status}}</ion-badge>
