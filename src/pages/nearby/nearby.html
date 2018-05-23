@@ -16,7 +16,7 @@
 
 
 <ion-content no-padding>
-  <ion-searchbar id="storeLocator" #place no-padding></ion-searchbar>
+  <ion-searchbar id="storeLocator" #place no-padding (ionBlur)="onInput($event)"></ion-searchbar>
   <div #map id="map"></div>
   <div class="branchList">
     <ion-card no-margin [attr.data-class]="place.branchHide" *ngFor="let place of nearbyPlaces; index as i">

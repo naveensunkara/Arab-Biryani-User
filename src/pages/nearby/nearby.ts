@@ -11,28 +11,24 @@ export class NearbyPage {
   @ViewChild('map') mapElement: ElementRef;
   @ViewChild('place') search: ElementRef;
   myLocation: any;
-  //map: any;
+  map: any;
   userMarker: any;
   branchHide: any = "show";
   userInfoWindow: any;
   markers: Array<Object> = [];
   infowindow: Array<any> = [];
   nearbyPlaces: any;
-  image = {
-    url: '/assets/imgs/pointer-app.png',
-    size: new google.maps.Size(71, 71),
-    origin: new google.maps.Point(-23, -25),
-    anchor: new google.maps.Point(17, 34),
-    scaledSize: new google.maps.Size(25, 25)
-  };
   showFlag: boolean = false;
+  labels: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation, public ngZone: NgZone) {
   }
 
   ionViewDidLoad() {
+    
     this.geolocation.getCurrentPosition().then((position) => {
       this.myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      let markers = [], infoWindows = [], labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';;
+      let markers = [], infoWindows = [], labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      this.labels = labels;
       let mapOptions = {
         center: this.myLocation,
         zoom: 13,
@@ -40,6 +36,7 @@ export class NearbyPage {
         disableDefaultUI: true
       }
       let map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      this.map = map;
       let userMarker = new google.maps.Marker({
         map: map,
         animation: google.maps.Animation.DROP,
@@ -66,6 +63,7 @@ export class NearbyPage {
         name: ['AASIFE']
       }, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
+          this.nearbyPlaces = results;
           for (var i = 0; i < results.length; i++) {
             let resultMarker = new google.maps.Marker({
               map: map,
@@ -86,12 +84,15 @@ export class NearbyPage {
             infoWindows.push(resultInfoWindow);
             markers.push(resultMarker);
             google.maps.event.addListener(resultMarker, 'click', (event) => {
-              for (var j = 0; j < infoWindows.length; j++) {
+              for (var j = 1; j < infoWindows.length; j++) {
                 let temp = infoWindows[j];
+                results[j-1].branchHide = "hide";
                 temp.close();
               }
               this.ngZone.run(() => {
                 userInfoWindow.close();
+                this.nearbyPlaces[labels.indexOf(resultMarker.label)].branchHide = "show";
+                this.showFlag = true;        
                 resultInfoWindow.open(map, resultMarker);
               });
             })
@@ -101,6 +102,7 @@ export class NearbyPage {
       let searchBox = new google.maps.places.SearchBox(this.search['_searchbarInput'].nativeElement);
       map.addListener('bounds_changed', function () {
         searchBox.setBounds(map.getBounds());
+        //console.log(searchBox.gm_accessors_)
       });
       searchBox.addListener('places_changed', function () {
         var places = searchBox.getPlaces();
@@ -123,13 +125,6 @@ export class NearbyPage {
           console.log("Returned place contains no geometry");
           return;
         }
-        var icon = {
-          url: '/assets/imgs/pointer-app.png',
-          size: new google.maps.Size(71, 71),
-          origin: new google.maps.Point(-23, -25),
-          anchor: new google.maps.Point(17, 34),
-          scaledSize: new google.maps.Size(25, 25)
-        };
 
         // Create a marker for each place.
         markers.push(new google.maps.Marker({
@@ -198,16 +193,25 @@ export class NearbyPage {
       });
     })
   }
+
+  onInput(event){
+    let lat = this.map.center.lat(), lng = this.map.center.lng();
+    
+  }
+
   openChat() {
     this.navCtrl.push('ChatPage');
   }
+
   backButtonClick() {
     this.navCtrl.pop();
   }
+
   showAll() {
     this.showFlag = false;
     this.nearbyPlaces.forEach(element => {
       element.branchHide = "show";
     });
   }
+
 }
