@@ -24,8 +24,9 @@ export class NearbyPage {
   }
 
   ionViewDidLoad() {
-    
+
     this.geolocation.getCurrentPosition().then((position) => {
+      //User Location, Marker, Infowindow - starts
       this.myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       let markers = [], infoWindows = [], labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       this.labels = labels;
@@ -55,6 +56,8 @@ export class NearbyPage {
       userInfoWindow.open(map, userMarker);
       markers.push(userMarker);
       infoWindows.push(userInfoWindow);
+      //User Location, Marker, Infowindow - ends
+      //Nearby restaurants - start
       let service = new google.maps.places.PlacesService(map);
       service.nearbySearch({
         location: this.myLocation,
@@ -86,19 +89,20 @@ export class NearbyPage {
             google.maps.event.addListener(resultMarker, 'click', (event) => {
               for (var j = 1; j < infoWindows.length; j++) {
                 let temp = infoWindows[j];
-                results[j-1].branchHide = "hide";
+                results[j - 1].branchHide = "hide";
                 temp.close();
               }
               this.ngZone.run(() => {
                 userInfoWindow.close();
                 this.nearbyPlaces[labels.indexOf(resultMarker.label)].branchHide = "show";
-                this.showFlag = true;        
+                this.showFlag = true;
                 resultInfoWindow.open(map, resultMarker);
               });
             })
           }
         }
       });
+      //Nearby restaurants - ends
       let searchBox = new google.maps.places.SearchBox(this.search['_searchbarInput'].nativeElement);
       map.addListener('bounds_changed', function () {
         searchBox.setBounds(map.getBounds());
@@ -149,6 +153,7 @@ export class NearbyPage {
           name: ['AASIFE']
         }, (results, status) => {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
+            window.localStorage.setItem('nearby', JSON.stringify(results));
             for (var i = 0; i < results.length; i++) {
               let resultMarker = new google.maps.Marker({
                 map: map,
@@ -173,10 +178,10 @@ export class NearbyPage {
                   let temp = infoWindows[j];
                   temp.close();
                 }
-                
-                  userInfoWindow.close();
-                  resultInfoWindow.open(map, resultMarker);
-                
+                window.localStorage.setItem('markerIndex', String(labels.indexOf(resultMarker.label)));
+                userInfoWindow.close();
+                resultInfoWindow.open(map, resultMarker);
+
               })
             }
           }
@@ -194,9 +199,11 @@ export class NearbyPage {
     })
   }
 
-  onInput(event){
-    let lat = this.map.center.lat(), lng = this.map.center.lng();
-    
+  onInput(event) {
+    setTimeout(() => {
+      this.nearbyPlaces = JSON.parse(window.localStorage.getItem('nearby'));
+      
+    }, 2000)
   }
 
   openChat() {
@@ -209,6 +216,7 @@ export class NearbyPage {
 
   showAll() {
     this.showFlag = false;
+    window.localStorage.setItem('markerIndex', null);
     this.nearbyPlaces.forEach(element => {
       element.branchHide = "show";
     });
