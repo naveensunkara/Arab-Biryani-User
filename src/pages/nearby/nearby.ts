@@ -26,6 +26,7 @@ export class NearbyPage {
   ionViewDidLoad() {
 
     this.geolocation.getCurrentPosition().then((position) => {
+      window.localStorage.setItem('markerIndex', null);
       //User Location, Marker, Infowindow - starts
       this.myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       let markers = [], infoWindows = [], labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -38,6 +39,7 @@ export class NearbyPage {
       }
       let map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
       this.map = map;
+      
       let userMarker = new google.maps.Marker({
         map: map,
         animation: google.maps.Animation.DROP,
@@ -106,7 +108,6 @@ export class NearbyPage {
       let searchBox = new google.maps.places.SearchBox(this.search['_searchbarInput'].nativeElement);
       map.addListener('bounds_changed', function () {
         searchBox.setBounds(map.getBounds());
-        //console.log(searchBox.gm_accessors_)
       });
       searchBox.addListener('places_changed', function () {
         var places = searchBox.getPlaces();
@@ -176,6 +177,7 @@ export class NearbyPage {
               google.maps.event.addListener(resultMarker, 'click', (event) => {
                 for (var j = 0; j < infoWindows.length; j++) {
                   let temp = infoWindows[j];
+                  //results[j - 1].branchHide = "hide";
                   temp.close();
                 }
                 window.localStorage.setItem('markerIndex', String(labels.indexOf(resultMarker.label)));
@@ -200,10 +202,16 @@ export class NearbyPage {
   }
 
   onInput(event) {
-    setTimeout(() => {
+    setInterval(() => {
       this.nearbyPlaces = JSON.parse(window.localStorage.getItem('nearby'));
-      
-    }, 2000)
+      if(window.localStorage.markerIndex != 'null' && window.localStorage.markerIndex != undefined){
+        for (var j = 0; j < this.nearbyPlaces.length; j++){
+          this.nearbyPlaces[j].branchHide = 'hide';
+        }
+        this.nearbyPlaces[window.localStorage.markerIndex].branchHide = 'show';
+        this.showFlag = true;
+      }
+    }, 500)
   }
 
   openChat() {
